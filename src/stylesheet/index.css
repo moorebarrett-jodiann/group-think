@@ -71,6 +71,7 @@
     background: -moz-linear-gradient(right, var(--app-purple), var(--app-light-blue));
     background: linear-gradient(to right, var(--app-purple) , var(--app-light-blue)); 
     -webkit-background-clip: text;
+    background-clip: text;
     -webkit-text-fill-color: transparent;
 }
 
@@ -141,7 +142,7 @@
     background-size: 15px;
 }
 
-.center .login-container .login-view form button {
+.center .login-container .login-view form input[type="button"] {
     height: 45px;
     width: 100%;
     text-align: center;
@@ -157,22 +158,22 @@
     color: var(--app-light-text-color);
 }
 
-.center .login-container .login-view form button:hover {
+.center .login-container .login-view form input[type="button"]:hover {
     background-color: var(--app-purple-hover);
 }
 
-.center .login-container .login-view form button.secondary {
+.center .login-container .login-view form input[type="button"].secondary {
     background-color: transparent;
     border: 1px solid var(--app-purple);
     color: var(--app-purple);
 }
 
-.center .login-container .login-view form button.secondary:hover {
+.center .login-container .login-view form input[type="button"].secondary:hover {
     background-color: var(--app-purple-hover);
     color: var(--app-light-text-color)
 }
 
-.center .login-container .login-view form button + button {
+.center .login-container .login-view form input[type="button"] + input[type="button"] {
     margin-left: 15px;
 }
 

@@ -31,9 +31,9 @@
                                 <div class="underline current"></div>
                                 <div class="underline"></div>
                             </div>
-                            <form>
+                            <form novalidate>
                                 <input type="email" class="email" placeholder="Email" required/>
-                                <input type="password" class="password" placeholder="Password" maxlength="20" required>
+                                <input type="password" class="password" placeholder="Password" required>
                                 <div class="form-links flexbox">
                                     <p>
                                         <input type="checkbox" id="remember-me" name="remember-me"/>
@@ -42,8 +42,8 @@
                                     <a href="#">Forgot Password?</a>
                                 </div>
                                 <div class="flexbox">
-                                    <button>Login</button>
-                                    <button class="secondary">Create Profile</button>
+                                    <input type="button" class="submit" value="Submit"/>
+                                    <input type="button" class="secondary create-account" value="Submit"/>
                                 </div>
                             </form>
                             <ul>
