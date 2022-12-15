@@ -108,10 +108,27 @@
     border: 1px solid rgba(0, 0, 0, 0.1);
     background-color: transparent;
     border-radius: 4px;
-    /* box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px; */
     font-size: 17px;
     font-weight: 400;
     text-align: left;
+    transition: border 0.4s ease-in-out;
+}
+
+.center .login-container .login-view form .form-links p input[type="checkbox"] {
+    width: 15px;
+    height: 15px;
+    border: 1px solid rgba(0, 0, 0, 0.1);
+    background-color: transparent;
+    border-radius: 4px;
+}
+
+.center .login-container .login-view form input:not([type="checkbox"]):focus {
+    border: 1px solid rgba(56, 0, 54, 0.366);
+}
+
+.center .login-container .login-view form input:not([type="checkbox"])::placeholder {
+    color: var(--app-medium-grey);
+    font-size: 17px;
 }
 
 .center .login-container .login-view form input.email {
@@ -128,12 +145,12 @@
     height: 45px;
     width: 100%;
     text-align: center;
-    border-radius: 5px;
+    border-radius: 4px;
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     font-size: 15px;
     font-weight: 600;
     letter-spacing: 0.2px;
-    transition: all 0.25s ease-in-out;
+    transition: all 0.4s ease-in-out;
     background-color: var(--app-purple);
     margin-top: 20px;
     padding: 0 10px;
@@ -170,19 +187,28 @@
     margin-top: 20px;
 }
 
-.center .login-container .login-view form .form-links a {
-    transition: color 0.25s ease-in-out;
-}
-
-.center .login-container .login-view form .form-links a:hover {
-    color: var(--app-purple-hover);
-}
-
 .center .login-container .login-view form .form-links p, a {
     color: var(--app-medium-grey);
     font-size: 14px;
     font-weight: 400;
     text-decoration: none;
+}
+
+.center .login-container .login-view form .form-links p {
+    display: flex;
+    align-items: center
+}
+
+.center .login-container .login-view form .form-links p input {
+    margin-right: 10px;
+}
+
+.center .login-container .login-view form .form-links a {
+    transition: color 0.4s ease-in-out;
+}
+
+.center .login-container .login-view form .form-links a:hover {
+    color: var(--app-purple-hover);
 }
 
 .center .login-container .login-view ul {
@@ -208,10 +234,10 @@
     letter-spacing: var(--app-letter-spacing);
     cursor: pointer;
     text-decoration: none;
-    color: var(--app-light-blue);
-    transition: color 0.25s ease-in-out;
+    color: var(--app-purple);
+    transition: color 0.4s ease-in-out;
 }
 
 .center .login-container .login-view ul li a:hover {
-    color: var(--app-light-blue-hover);
+    color: var(--app-purple-hover);
 }
