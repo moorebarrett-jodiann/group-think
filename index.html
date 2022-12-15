@@ -17,9 +17,53 @@
     </head>
     <body>
         <main>
-            <div>
-                
+            <div class="container">
+                <div class="center">
+                    <div class="login-container">
+                        <div class="login-logo-bg">
+                            <div class="logo-image"></div>
+                            <div class="logo-name">GroupThink</div>
+                        </div>
+                        <div class="login-view">
+                            <h1>Welcome to <span>GroupThink</span></h1>
+                            <p class="slogan">Think, Explore, Meet.</p>
+                            <div class="flexbox">
+                                <div class="underline current"></div>
+                                <div class="underline"></div>
+                            </div>
+                            <form>
+                                <input type="text" placeholder="name@email.com">
+                                <input type="password" maxlength="20">
+                                <div class="flexbox">
+                                    <p>
+                                        <label for="remember-me">Remember Me</label>
+                                        <input type="checkbox" id="remember-me" name="remember-me"/>
+                                    </p>
+                                    <a href="forgot-password">Forgot Password?</a>
+                                </div>
+                                <div class="flexbox">
+                                    <button>Login</button>
+                                    <button>Create Profile</button>
+                                </div>
+                            </form>
+                            <ul>
+                                <li>Or login with</li>
+                                <li><a href="#">Facebook</a></li>
+                                <li><a href="#">LinkedIn</a></li>
+                                <li><a href="#">Google</a></li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
             </div>
         </main>
+        <script>
+            let vh = window.innerHeight * 0.01;
+            document.documentElement.style.setProperty('--vh', `${vh}px`);
+            window.addEventListener('resize', () => {
+              vh = window.innerHeight * 0.01;
+              document.documentElement.style.setProperty('--vh', `${vh}px`);
+            });
+       </script>
     </body>
 </html>
