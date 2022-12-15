@@ -19,9 +19,9 @@
         <main>
             <div class="container">
                 <div class="center">
-                    <div class="login-container">
+                    <div class="login-container flexbox">
                         <div class="login-logo-bg">
-                            <div class="logo-image"></div>
+                            <div class="logo-image"><i class="fa-solid fa-users-rays"></i></div>
                             <div class="logo-name">GroupThink</div>
                         </div>
                         <div class="login-view">
@@ -32,18 +32,18 @@
                                 <div class="underline"></div>
                             </div>
                             <form>
-                                <input type="text" placeholder="name@email.com">
-                                <input type="password" maxlength="20">
-                                <div class="flexbox">
+                                <input type="email" class="email" placeholder="Email" required/>
+                                <input type="password" class="password" placeholder="Password" maxlength="20" required>
+                                <div class="form-links flexbox">
                                     <p>
                                         <label for="remember-me">Remember Me</label>
                                         <input type="checkbox" id="remember-me" name="remember-me"/>
                                     </p>
-                                    <a href="forgot-password">Forgot Password?</a>
+                                    <a href="#">Forgot Password?</a>
                                 </div>
                                 <div class="flexbox">
                                     <button>Login</button>
-                                    <button>Create Profile</button>
+                                    <button class="secondary">Create Profile</button>
                                 </div>
                             </form>
                             <ul>

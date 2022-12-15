@@ -6,10 +6,13 @@
     --app-yellow:#ffd13c;
     --app-green:#33ab4e;
     --app-green-hover:#158f32;
-    --app-purple:#833cff;
+    --app-purple:#380036;
+    --app-purple-hover:#580155;
     --app-orange:#ff833c;
     --app-pink:#f85fdc;
     --app-orange-hover:#fe7a2d;
+    --app-light-blue:#0CBABA;
+    --app-light-blue-hover:#048989;
     --app-blue:#3b5998;
     --app-blue-hover:#30529c;
     --app-white:#fbfbfb;
@@ -31,7 +34,7 @@
 }
     
 body {
-    background-color: var(--app-dark-bg);
+    background: url("../images/logo-bg.jpg");
 }
 
 .container {
