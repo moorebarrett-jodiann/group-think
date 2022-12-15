@@ -12,15 +12,16 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="src/stylesheet/index.css" media="all"/>
-        <script src="src/scripts/index.js" defer></script>
+        <script src="src/scripts/home.js" defer></script>
         <title>Group Think</title>
     </head>
     <body>
         <main>
-            <header id="header">
+            <header>
                 <div class="container flexbox">
-                    <div class="title flexbox">
-                        <a href="index.html"><h1>Group Think</h1></a>
+                    <div class="login-logo-bg">
+                        <div class="logo-image"><i class="fa-solid fa-users-rays"></i></div>
+                        <div class="logo-name">GroupThink</div>
                     </div>
                     <nav>
                         <ul>
@@ -32,43 +33,47 @@
                             <li><a href="#">Try Premium</a></li>
                         </ul>
                     </nav>
-                    <div class="avatar">
+                    <div class="avatar flexbox">
                         <img src="src/images/avatar.png" alt="Profile Picture"/>
+                        <div class="dropdown flexbox">
+                            <i class="fa-solid fa-angle-up dropbtn"></i>
+                            <div class="dropdown-content flexbox">
+                                <a href="#index.html"><i class="fa-solid fa-right-from-bracket"></i>Logout</a>
+                            </div>
+                        </div>
                     </div>
                 </div>
             </header>
-            <div class="row">
-                <div class="card">
-                    <div class="profile">
-
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="timeline">
-                        <!-- <div class="timeline-post">
-                            <div class="form">
-                                <form novalidate>
-                                    <textarea class="post-input" placeholder="Share something with us ..."></textarea>
-                                    <div class="flexbox">
-                                        <label for="fileInput"> 
-                                            <i class="fa-regular fa-image file-icon"></i>
-                                        </label>
-                                        <input id="fileInput" type="file" class="post-file" accept="image/*" />
-                                        <span class="file-name-selected"></span>
-                                        <button class="create-post">Post</button>
-                                    </div>
-                                </form>
-                            </div>
-                        </div>
-                        <div class="message"></div>
-                        <div class="timeline-container grid">
+            <div class="container">
+                <div class="home-center">
+                    <div class="row">
+                        <div class="card profile">
         
-                        </div> -->
-                    </div>
-                </div>
-                <div class="card">
-                    <div class="users">
-
+                        </div>
+                        <div class="card timeline">
+                            <!-- <div class="timeline-post">
+                                <div class="form">
+                                    <form novalidate>
+                                        <textarea class="post-input" placeholder="Share something with us ..."></textarea>
+                                        <div class="flexbox">
+                                            <label for="fileInput"> 
+                                                <i class="fa-regular fa-image file-icon"></i>
+                                            </label>
+                                            <input id="fileInput" type="file" class="post-file" accept="image/*" />
+                                            <span class="file-name-selected"></span>
+                                            <button class="create-post">Post</button>
+                                        </div>
+                                    </form>
+                                </div>
+                            </div>
+                            <div class="message"></div>
+                            <div class="timeline-container grid">
+            
+                            </div> -->
+                        </div>
+                        <div class="card users">
+        
+                        </div>
                     </div>
                 </div>
             </div>

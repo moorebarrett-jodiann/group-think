@@ -1,6 +1,7 @@
 @import "./reset.css";
 
 :root {
+    --app-light-bg:#f5fcff;
     --app-dark-bg:#1f2227;
     --app-red:#ff3c57;
     --app-yellow:#ffd13c;
@@ -27,14 +28,18 @@
     --app-btn-height: 46px;
     --app-btn-width: 100%;
     --app-letter-spacing: 0.2px;
-    --app-header-line-height: 56px;
+    --app-header-line-height: 70px;
     --app-text-line-height: 50px;
     --app-main-font-size: 18px;
     --app-secondary-font-size: 14px;
 }
     
-body {
+body.index {
     background: url("../images/logo-bg.jpg");
+}
+
+body:not(.index) {
+    background-color: #f1f1f1;
 }
 
 .container {
@@ -44,4 +49,18 @@ body {
 
 .flexbox {
     display: flex;
+}
+
+.center {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    display: grid;
+    place-items: center;
+}
+
+.home-center {
+    height: 100vh;
+    height: calc(var(--vh, 1vh) * 100);
+    display: grid;
+    padding: 40px 0px;
 }

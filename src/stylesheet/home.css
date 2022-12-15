@@ -5,42 +5,94 @@
 
 header {
     line-height: var(--app-header-line-height);
-    height: 56px;
-    min-width: 700px;
-    background-color: var(--app-black);
+    height: 70px;
+    min-width: 800px;
+    background-color: #f8f8f8;
 }
 
 header .flexbox {
     justify-content: space-between;
 }
 
-header .title h1 {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--app-blue);
+header .login-logo-bg .logo-image, .logo-name {
+    display: inline;
+    margin-right: 5px;
+    font-size: 20px;
 }
 
-header .title a {
-    font-size: 22px;
-    font-weight: 600;
-    color: var(--app-blue);
-    text-decoration: none;
+header .login-logo-bg .logo-image i {
+    background: -moz-linear-gradient(top, var(--app-purple) 0%, var(--app-light-blue) 100%);
+    background: -webkit-linear-gradient(top, var(--app-purple) 0%, var(--app-light-blue) 100%);
+    background: linear-gradient(to right, var(--app-purple) 0%, var(--app-light-blue) 100%);
+    -webkit-background-clip: text;
+    -moz-background-clip: text;
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 25px;
 }
 
-.avatar {
-    width: 40px;
-    height: 40px;
+header .login-logo-bg .logo-name {
+    font-weight: 700;
+    color: var(--app-dark-text-color);
+}
+
+.avatar {    
     line-height: var(--app-header-line-height);
 }
 
 .avatar img {
-    font-size: 5px;
+    width: 40px;
+    height: 40px;
     color: var(--app-white);
-    width: 100%;
-    height: 100%;
     display: grid;
     place-items: center;
-    margin-top: 8px;
+    margin-top: 12px;
+}
+
+.avatar .dropbtn {
+    color: var(--app-dark-text-color);
+    margin-left: 20px;
+    cursor: pointer;
+    transition: all 0.4s ease;
+}
+
+.avatar .dropbtn:hover {
+    transform: rotateZ(-180deg);
+}
+
+.avatar .dropdown {
+    position: relative;
+    display: inline-block;
+}
+
+.avatar .dropdown-content {
+    display: none;
+    position: absolute;
+    right: 0;
+    background-color: var(--app-light-text-color);
+    box-shadow: rgba(0, 0, 0, 0.03) 0px 26px 30px 10px, rgba(0, 0, 0, 0.03) 0px 16px 10px 10px;
+    z-index: 1;
+    padding: 10px 20px;
+}
+
+.avatar .dropdown-content a {
+    color: var(--app-dark-text-color);
+    text-decoration: none;
+    display: inline;
+    transition: all 0.4s ease-in-out;
+}
+
+.avatar .dropdown-content a i {
+    display: inline;
+    padding-right: 10px;
+}
+
+.avatar .dropdown-content a:hover {
+    color: var(--app-purple);
+}
+
+.avatar .dropdown:hover .dropdown-content {
+    display: block;
 }
 
 nav ul {
@@ -58,19 +110,65 @@ nav ul li + li {
 nav ul li a {
     font-size: 16px;
     font-weight: 600;
-    letter-spacing: var(--app-letter-spcaing);
+    letter-spacing: var(--app-letter-spacing);
     cursor: pointer;
     text-decoration: none;
-    color: var(--app-light-text-color);
+    color: var(--app-dark-text-color);
     position: relative;
     transition: color 0.25s ease-in-out;
 }
 
 nav ul li a:hover {
-    color: var(--app-blue);
+    color: var(--app-purple);
 }
 
+/**************************************************/
+/*****   MAIN CONTAINER                      ******/
+/**************************************************/
 
-/**************************************************/
-/*****   MAIN CONTAINER (Post)               ******/
-/**************************************************/
+.row {
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+    width: 100%;
+}
+
+.row .card {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+    border-radius: 5px;
+    background-color: #f8f8f8;
+    box-shadow: 0 20px 48px 0 rgba(146, 153, 197, 0.15);
+    padding: 20px;
+}
+
+/* flex columns with screen width 800px and up */
+@media (min-width: 901px) {
+    .row .card.profile, .card.users {
+        width: 20%
+    }
+    
+    .row .card.timeline {
+        width: 40%
+    }
+}
+
+/* flex columns with screen width 801px and down */
+@media (max-width: 900px) {
+    .row .card.profile, .card.users {
+        width: 20%
+    }
+    
+    .row .card.timeline {
+        width: 40%
+    }
+}
+
+/* flex columns with screen width 480px and down */
+@media (max-width: 800px) {
+    .row .card.profile, .card.users, .row .card.timeline {
+        width: 100%
+    }
+}
+
