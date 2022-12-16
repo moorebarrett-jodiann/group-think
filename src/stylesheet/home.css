@@ -102,11 +102,11 @@ header .login-logo-bg .logo-name {
     }
 
     nav ul li + li {
-        margin-left: 18px;
+        margin-left: 20px;
     }
 
     nav ul li a {
-        font-size: 16px;
+        font-size: 15px;
         font-weight: 600;
         letter-spacing: var(--app-letter-spacing);
         cursor: pointer;
@@ -115,8 +115,8 @@ header .login-logo-bg .logo-name {
         position: relative;
         transition: color 0.25s ease-in-out;
     }
-    
-    nav ul li a.default {
+
+    nav ul li.default a {
         color: var(--app-light-blue);
     }
 
