@@ -16,6 +16,11 @@ function select(selector, parent = document) {
   return parent.querySelector(selector);
 }
 
+// Select All HTML elements by class, id and html element
+function selectAll(selector, parent = document) {
+  return parent.querySelectorAll(selector);
+}
+
 /**---------------------------------------------------------------------------- */
 
 /**--------------------------------- Data ------------------------------------- */
@@ -25,6 +30,10 @@ const submit = select('.submit');
 const createAcctBtn = select('.create-account');
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const messageContainer = select('.message');
+const togglePassword = select('#toggle-password');
+const email = select('.email');
+const password = select('.password');
+const allInput = selectAll('.center .login-container .login-view form input:not([type="checkbox"])');
 
 // const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 
@@ -37,16 +46,16 @@ function isObjectEmpty(obj) {
 }
 
 function validate () {
-    let email = select('.email').value.trim();
-    let password = select('.password').value.trim();
+    let emailVal = select('.email').value.trim();
+    let passwordVal = select('.password').value.trim();
   
     let message = '';
     let valid = true;
     
-    if(email.length === 0 || password.length === 0) {
+    if(emailVal.length === 0 || passwordVal.length === 0) {
         message = 'Your Email and Password are required\n';
         valid = false;
-    } else if(email.length > 0 && !emailRegex.test(email)) {
+    } else if(emailVal.length > 0 && !emailRegex.test(emailVal)) {
         message = 'Your Email and Password are incorrect\n';
         valid = false;
     }
@@ -67,7 +76,7 @@ function validate () {
             }
 
             // compare input with local storage values
-            if(savedEmail === email && savedPassword === password) {
+            if(savedEmail === emailVal && savedPassword === passwordVal) {
                 window.location.href = 'home.html';
             } else {
                 message = 'Your Email and Password are incorrect\n';
@@ -77,7 +86,7 @@ function validate () {
         // otherwise save first time login values to local storage
         } else {
             const credentials = [
-                {email: email, password: password}
+                {email: emailVal, password: passwordVal}
             ];
             localStorage.setItem('credentials', JSON.stringify(credentials));
             window.location.href = 'home.html';
@@ -98,6 +107,29 @@ onEvent('click', createAcctBtn, function (e) {
 // when page is reloaded clear form
 onEvent('load', window, () => {
     form.reset();
+});
+
+// toggle show password for login
+onEvent('click', togglePassword, function(){
+    const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+    password.setAttribute('type', type);
+    if(this.classList.contains('fa-eye-slash')) {
+        this.classList.remove('fa-eye-slash');
+        this.classList.add('fa-eye');
+    } else {
+        this.classList.remove('fa-eye');
+        this.classList.add('fa-eye-slash');
+    }
+});
+
+// trigger submit.click() when enter button is pressed on login page
+allInput.forEach(input => {
+    onEvent('keypress', input, function(e) {
+        if (e.key === "Enter") {
+          e.preventDefault();
+          submit.click();
+        }
+    });
 });
 
 /**---------------------------------------------------------------------------- */

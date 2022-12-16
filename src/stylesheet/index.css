@@ -140,6 +140,13 @@
     background-size: 15px;
 }
 
+.center .login-container .login-view form #toggle-password {
+    color: var(--app-medium-grey);
+    font-size: 15px;
+    margin-left: -35px; 
+    cursor: pointer;
+}
+
 .center .login-container .login-view form input[type="button"] {
     height: 45px;
     width: 100%;

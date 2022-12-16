@@ -62,7 +62,7 @@ header .login-logo-bg .logo-name {
     color: var(--app-light-blue);
 }
 
-.avatar .logout a[data-title]:hover:after {
+/* .avatar .logout a[data-title]:hover:after {
     opacity: 1;
     transition: all 0.25s ease-in-out;
     visibility: visible;
@@ -83,7 +83,7 @@ header .login-logo-bg .logo-name {
 
 .avatar .logout a[data-title] {
     position: relative;
-}
+} */
 
 /* Show reular nav menu when screen width is 923px and above */
 @media only screen and (min-width: 923px) { 
@@ -286,15 +286,13 @@ header .login-logo-bg .logo-name {
 
 .row .card.profile .premium-info p {
     font-size: 14px;
-    color: var(--app-medium-grey);
+    color: var(--app-dark-text-color);
 }
 
 .row .card.profile .premium-info button {
     height: 40px;
     text-align: center;
     border-radius: 4px;
-    font-size: 13px;
-    font-weight: 600;
     letter-spacing: 0.2px;
     transition: all 0.4s ease-in-out;
     background-color: var(--app-light-grey);
@@ -302,6 +300,20 @@ header .login-logo-bg .logo-name {
     text-transform: uppercase;
     padding: 0 20px;
     margin-top: 10px;
+}
+
+@media only screen and (min-width: 923px) { 
+    .row .card.profile .premium-info button {
+        font-size: 13px;
+        font-weight: 600;
+    }
+}
+
+@media only screen and (max-width: 922px) {
+    .row .card.profile .premium-info button {
+        font-size: 15px;
+        font-weight: 700;
+    }
 }
 
 .row .card.profile .premium-info button:hover {
