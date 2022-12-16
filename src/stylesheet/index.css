@@ -54,11 +54,12 @@
     border-top-right-radius: 20px;
     border-bottom-right-radius: 20px;
     display: grid;
+    place-items: center;
 }
 
-.center .login-container .login-view .login-view-inner {
+/* .center .login-container .login-view .login-view-inner {
     height: 80%;
-}
+} */
 
 .center .login-container .login-view h1 {
     color: var(--app-dark-text-color);
