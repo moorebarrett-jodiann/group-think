@@ -162,12 +162,16 @@ header .login-logo-bg .logo-name {
     border-radius: 5px;
 }
 
+.row .card.profile, .card.users {
+    box-shadow: 0 20px 48px 0 rgba(146, 153, 197, 0.15);
+    background-color: #f8f8f8;
+    align-self: flex-start;
+}
+
 /* flex columns with screen width 800px and up */
 @media only screen and (min-width: 923px) { 
     .row .card.profile, .card.users {
-        box-shadow: 0 20px 48px 0 rgba(146, 153, 197, 0.15);
         width: 20%;
-        background-color: #f8f8f8;
     }
     
     .row .card.timeline {
@@ -179,8 +183,6 @@ header .login-logo-bg .logo-name {
 @media only screen and (max-width: 922px) {
     .row .card.profile, .card.users {
         width: 100%;
-        background-color: #f8f8f8;
-        box-shadow: 0 20px 48px 0 rgba(146, 153, 197, 0.15);
     }
     
     .row .card.timeline {
