@@ -62,6 +62,29 @@ header .login-logo-bg .logo-name {
     color: var(--app-light-blue);
 }
 
+.avatar .logout a[data-title]:hover:after {
+    opacity: 1;
+    transition: all 0.25s ease-in-out;
+    visibility: visible;
+}
+
+.avatar .logout a[data-title]:after {
+    content: attr(data-title);
+    color: var(--app-light-blue);
+    position: absolute;
+    padding: 1px 5px 2px 5px;
+    bottom: -1.6rem;
+    left: 100%;
+    white-space: nowrap;
+    opacity: 0;
+    z-index: 9999;
+    visibility: hidden;
+}
+
+.avatar .logout a[data-title] {
+    position: relative;
+}
+
 /* Show reular nav menu when screen width is 923px and above */
 @media only screen and (min-width: 923px) { 
     .burger-menu i {
@@ -90,6 +113,10 @@ header .login-logo-bg .logo-name {
         color: var(--app-dark-text-color);
         position: relative;
         transition: color 0.25s ease-in-out;
+    }
+    
+    nav ul li a.default {
+        color: var(--app-light-blue);
     }
 
     nav ul li a:hover {
@@ -160,7 +187,7 @@ header .login-logo-bg .logo-name {
     .row .card.timeline {
         width: 100%;
     }
-} */
+}
 
 /**************************************************/
 /*****           PROFILE                     ******/
@@ -203,7 +230,10 @@ header .login-logo-bg .logo-name {
 }
 
 .row .card.profile .profile-info .linkedin {
-    width: 85%;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .row .card.profile .profile-info .linkedin i {
@@ -325,8 +355,8 @@ header .login-logo-bg .logo-name {
 
 .file-icon{
     cursor: pointer;
-    color: var(--app-dark-text-color);
-    font-size: 30px;
+    color: var(--app-medium-grey);
+    font-size: 25px;
 }
 
 .timeline-post .form .flexbox button {
@@ -454,6 +484,7 @@ header .login-logo-bg .logo-name {
     border-bottom: 1px solid rgba(0, 0, 0, 0.1);
     display: flex;
     justify-content: space-between;
+    align-items: center;
 }
 
 .row .card.users .users .user-cards .user-card .img {
@@ -465,6 +496,7 @@ header .login-logo-bg .logo-name {
     .row .card.users .users .user-cards .user-card .img {
         width: 50px;
         height: 50px;
+        margin-right: 10px;
     }
 
     .row .card.users .users .user-cards .user-card .details .name {

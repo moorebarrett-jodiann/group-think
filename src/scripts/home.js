@@ -65,18 +65,18 @@ function printUsers(users) {
         
         div.classList.add('user-cards');
         div.innerHTML = `
-        <div class="user-card flexbox">
-        <div class="img">
-        <img src=${picture}>
-        </div>
-        <div class="details">
-        <p class="name">${name}</p>
-        <p class="city">${city}, ${country}</p>
-        </div>
-        <div class="connect">
-        <i class="fa-solid fa-plus"></i>
-        </div>
-        </div>
+            <div class="user-card flexbox">
+                <div class="img">
+                    <img src=${picture}>
+                </div>
+                <div class="details">
+                    <p class="name">${name}</p>
+                    <p class="city">${city}</p>
+                </div>
+                <div class="connect">
+                    <i class="fa-solid fa-plus"></i>
+                </div>
+            </div>
         `;
         userContainer.appendChild(div);
     });
@@ -89,7 +89,7 @@ onEvent('load', window, () => {
 
 /**---------------------------------------------------------------------------- */
 
-/**------------------------------------ Posts --------------------------------- */
+/**--------------------------------- Timeline --------------------------------- */
 
 // submit form
 function submitForm(postInput, postFile) {
@@ -152,7 +152,6 @@ onEvent('change', postFile, function() {
 
 // when page is reloaded clear grid and form
 onEvent('load', window, () => {
-    gridBox.innerHTML = '';
     fileNameSpan.innerText = '';
     form.reset();
 });

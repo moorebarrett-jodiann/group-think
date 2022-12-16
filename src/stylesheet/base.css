@@ -44,7 +44,7 @@ body:not(.index) {
 }
 
 .container {
-    width: min(100% - 30px, 1080px);
+    width: min(100% - 25px, 1080px);
     margin-inline: auto;
 }
 
