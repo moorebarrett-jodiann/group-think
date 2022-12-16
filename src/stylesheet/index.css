@@ -143,8 +143,10 @@
 .center .login-container .login-view form #toggle-password {
     color: var(--app-medium-grey);
     font-size: 15px;
-    margin-left: -35px; 
+    margin-left: 92%;
     cursor: pointer;
+    bottom: 35px;
+    position: relative;
 }
 
 .center .login-container .login-view form input[type="button"] {
