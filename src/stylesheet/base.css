@@ -74,7 +74,6 @@ header {
 .home-center {
     min-height: calc(100vh - 70px - 112px);
     display: grid;
-    place-items: center;
     margin: 20px 0px;
 }
 
