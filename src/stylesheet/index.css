@@ -98,7 +98,6 @@
 
 .center .login-container .login-view .message {
     text-align: left;
-    margin-top: 20px;
 }
 
 .center .login-container .login-view form input:not([type="checkbox"]) {
