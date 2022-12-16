@@ -89,6 +89,7 @@ header .login-logo-bg .logo-name {
 @media only screen and (min-width: 923px) { 
     .burger-menu i {
         visibility: hidden;
+        display: none
     }
     
     nav ul {
@@ -129,10 +130,12 @@ header .login-logo-bg .logo-name {
 @media only screen and (max-width: 922px) {
     nav {
         visibility: hidden;
+        display: none;
     }
     
     .burger-menu {
         visibility: visible;
+        display: inline;
         color: var(--app-dark-text-color);
         font-size: 16px;
         margin-right: 20px;
