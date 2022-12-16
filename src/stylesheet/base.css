@@ -59,8 +59,17 @@ body:not(.index) {
 }
 
 .home-center {
-    height: 100vh;
-    height: calc(var(--vh, 1vh) * 100);
-    display: grid;
     margin: 40px 0px;
+}
+
+footer {
+    height: 112px;
+    background-color: #f8f8f8;
+    display: flex;
+    align-content: center;
+    align-items: center;
+}
+
+footer .flexbox {
+    justify-content: space-between;
 }
