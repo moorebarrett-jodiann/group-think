@@ -68,12 +68,25 @@ header {
 }
 
 .home-center {
-    /* height: calc(var(--vh, 1vh) * 100); */
-    height: 100vh;
-    /* height: calc(var(--vh, 1vh) * 100); */
+    min-height: calc(100vh - 70px - 112px);
     display: grid;
     place-items: center;
     margin: 20px 0px;
+}
+
+.message {
+    width: 100%;
+    height: 40px;
+}
+
+.message p {
+    opacity: 0;
+    font-size: 14px;
+    animation: disappear 5s ease-in-out;
+}
+
+.message p.invalid {
+    color: var(--app-purple);
 }
 
 footer {
@@ -87,4 +100,29 @@ footer {
 
 footer .flexbox {
     justify-content: space-between;
+}
+
+
+/**************************************************/
+/*****       Animations                      ******/
+/**************************************************/
+
+@keyframes appearUp {
+    from {
+        opacity: 0;
+        transform: translate(0px, 10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
+    }
+}
+
+@keyframes disappear {
+    from {
+        opacity: 1;
+    }
+    to {
+        opacity: 0;
+    }
 }

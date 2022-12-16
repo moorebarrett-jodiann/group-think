@@ -92,8 +92,9 @@
     margin-right: 15px;
 }
 
-.center .login-container .login-view form {
-    margin-top: 50px;
+.center .login-container .login-view .message {
+    text-align: left;
+    margin-top: 20px;
 }
 
 .center .login-container .login-view form input:not([type="checkbox"]) {
@@ -231,6 +232,10 @@
     text-decoration: none;
     color: var(--app-purple);
     transition: color 0.4s ease-in-out;
+}
+
+.center .login-container .login-view ul li a i {
+    margin-right: 10px;
 }
 
 .center .login-container .login-view ul li a:hover {

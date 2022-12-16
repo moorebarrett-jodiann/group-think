@@ -125,12 +125,9 @@ function submitForm(postInput, postFile) {
 
 // function to validate form input
 function validateFormInput () {
-    console.log("here");
     if(postInput.value === '' && postFile.value === '') {
-        console.log("a");
         message.innerHTML = `<p class="invalid">Your post cannot be empty.</p>`;
     } else {
-        console.log("b");
         submitForm(postInput, postFile);
         postInput.value = '';
         postFile.value = '';

@@ -239,7 +239,7 @@ header .login-logo-bg .logo-name {
 .row .card.profile .profile-info .linkedin i {
     font-size: 14px;
     color: var(--app-light-blue);
-    margin-right: 10px;
+    margin-right: 10px;;
 }
 
 .row .card.profile .profile-info .linkedin a {
@@ -393,7 +393,6 @@ header .login-logo-bg .logo-name {
     background-color: #f8f8f8;
     border-radius: 5px;
     animation: appearUp 0.4s ease-in;
-    transition: border 0.25s ease-in-out;
     padding: 15px;
 }
 
@@ -447,21 +446,9 @@ header .login-logo-bg .logo-name {
 }
 
 .message {
-    width: 100%;
-    height: 40px;
     display: grid;
     align-items: center;
     text-align: center;
-}
-
-.message p {
-    opacity: 0;
-    font-size: 14px;
-    animation: disappear 5s ease-in-out;
-}
-
-.message p.invalid {
-    color: var(--app-purple);
 }
 
 /**************************************************/
@@ -486,6 +473,7 @@ header .login-logo-bg .logo-name {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    animation: appearUp 0.4s ease-in;
 }
 
 .row .card.users .users .user-cards .user-card .img {
@@ -569,35 +557,7 @@ header .login-logo-bg .logo-name {
     }
 }
 
-footer .copyright p {
-    font-weight: 600;
-    color: var(--app-purple);
-}
-
 footer p {
     line-height: 30px;
-}
-
-/**************************************************/
-/*****       Animations                      ******/
-/**************************************************/
-
-@keyframes appearUp {
-    from {
-        opacity: 0;
-        transform: translate(0px, 10px);
-    }
-    to {
-        opacity: 1;
-        transform: translate(0);
-    }
-}
-
-@keyframes disappear {
-    from {
-        opacity: 1;
-    }
-    to {
-        opacity: 0;
-    }
+    color: var(--app-light-blue);
 }

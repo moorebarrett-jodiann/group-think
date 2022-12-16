@@ -24,6 +24,7 @@ const form = select('form');
 const submit = select('.submit');
 const createAcctBtn = select('.create-account');
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
+const messageContainer = select('.message');
 // const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 
 /**---------------------------------------------------------------------------- */
@@ -52,7 +53,7 @@ function validate () {
     }
   
     if (!valid) {
-        alert(message);
+        messageContainer.innerHTML = `<p class="invalid">${message}</p>`;
     } else {
         // retrieve email and password from local storage
         const credentials = JSON.parse(localStorage.getItem('credentials') || "[]");
@@ -69,7 +70,7 @@ function validate () {
                 window.location.href = 'home.html';
             } else {
                 message = 'Your Email and Password are incorrect\n';
-                alert(message);
+                messageContainer.innerHTML = `<p class="invalid">${message}</p>`;
                 form.reset();
             }
         // otherwise save first time login values to local storage
