@@ -25,8 +25,7 @@ const submit = select('.submit');
 const createAcctBtn = select('.create-account');
 const emailRegex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 const messageContainer = select('.message');
-let email = select('.email');
-let password = select('.password');
+
 // const passwordRegex = /^(?=.*\d)(?=.*[!@#$%^&*])(?=.*[a-z])(?=.*[A-Z]).{5,}$/;
 
 /**---------------------------------------------------------------------------- */
@@ -38,8 +37,8 @@ function isObjectEmpty(obj) {
 }
 
 function validate () {
-    email = email.value.trim();
-    password = password.value.trim();
+    let email = select('.email').value.trim();
+    let password = select('.password').value.trim();
   
     let message = '';
     let valid = true;
@@ -99,14 +98,6 @@ onEvent('click', createAcctBtn, function (e) {
 // when page is reloaded clear form
 onEvent('load', window, () => {
     form.reset();
-});
-
-// after entering password, trigger submit.click() when Enter button is pressed
-onEvent('keypress', password, function(e) {
-    if (e.key === "Enter") {
-      e.preventDefault();
-      submit.click();
-    }
 });
 
 /**---------------------------------------------------------------------------- */
