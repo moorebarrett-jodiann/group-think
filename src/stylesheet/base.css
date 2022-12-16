@@ -60,11 +60,15 @@ body:not(.index) {
     place-items: center;
 }
 
+.row {
+    min-width: 300px;
+}
+
 header {
     line-height: var(--app-header-line-height);
     height: 70px;
     background-color: #f8f8f8;
-    min-width: 500px;
+    min-width: 300px;
 }
 
 .home-center {
@@ -95,7 +99,7 @@ footer {
     display: flex;
     align-content: center;
     align-items: center;
-    min-width: 500px;
+    min-width: 300px;
 }
 
 footer .flexbox {

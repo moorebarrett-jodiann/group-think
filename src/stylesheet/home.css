@@ -153,7 +153,6 @@ header .login-logo-bg .logo-name {
     flex-flow: row wrap;
     gap: 10px;
     width: 100%;
-    min-width: 500px;
 }
 
 .row .card {

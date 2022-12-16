@@ -17,6 +17,10 @@
     padding: 5%;
 }
 
+.center .login-container .login-view {
+    min-width: 400px;
+}
+
 .center .login-container .login-logo-bg {
     background: #fff url("../images/logo-bg.jpg") center center / cover no-repeat;
     border-top-left-radius: 20px;
