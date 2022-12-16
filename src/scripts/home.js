@@ -30,9 +30,17 @@ const options = {
     mode: 'cors'
 };
 
+const form = select('form');
+const gridBox = select('.grid');
+const postInput = select('.post-input');
+const postFile = select('.post-file');
+const fileNameSpan = select('.file-name-selected');
+const createPost = select('.create-post');
+const message = select('.message');
+
 /**---------------------------------------------------------------------------- */
 
-/**---------------- Login Validation and Redirect ----------------------------- */
+/**----------------------------- Generate Users ------------------------------- */
 
 async function getUsers() {
     try {
@@ -54,21 +62,21 @@ function printUsers(users) {
         const name = `${user.name?.first} ${user.name?.last}`;
         const city = user.location?.city;
         const country = user.location?.country;
-
+        
         div.classList.add('user-cards');
         div.innerHTML = `
-            <div class="user-card flexbox">
-                <div class="img">
-                    <img src=${picture}>
-                </div>
-                <div class="details">
-                    <p class="name">${name}</p>
-                    <p class="city">${city}, ${country}</p>
-                </div>
-                <div class="connect">
-                    <i class="fa-solid fa-plus"></i>
-                </div>
-            </div>
+        <div class="user-card flexbox">
+        <div class="img">
+        <img src=${picture}>
+        </div>
+        <div class="details">
+        <p class="name">${name}</p>
+        <p class="city">${city}, ${country}</p>
+        </div>
+        <div class="connect">
+        <i class="fa-solid fa-plus"></i>
+        </div>
+        </div>
         `;
         userContainer.appendChild(div);
     });
@@ -80,3 +88,71 @@ onEvent('load', window, () => {
 });
 
 /**---------------------------------------------------------------------------- */
+
+/**------------------------------------ Posts --------------------------------- */
+
+// submit form
+function submitForm(postInput, postFile) {
+    
+    try {
+        window.URL = window.URL || window.webkitURL;
+        let url = (postFile.value !== '') ? URL.createObjectURL(postFile.files[0]) : '';
+        let image = select('.avatar .img').innerHTML;
+        let today = new Date().toLocaleDateString('en-ca', { year:"numeric", month:"short", day:"numeric"});
+
+        // build posts in grid
+        var div = document.createElement('div');
+        div.classList.add('card');
+        div.innerHTML = `
+            <div class="post-header flexbox">
+                <div class="post-profile-pic">${image}</div>
+                <h4 class="profile-name">Jodi-Ann Barrett</h4>
+                <p class="post-date">${today}</p>
+            </div>
+            <div class="post-body">
+                <p>${postInput.value}</p>
+                <div class="post-body-img">
+                    <img src="${url}"/>
+                </div>
+            </div>
+        `;
+        gridBox.prepend(div);
+
+    } catch (error) {
+        message.innerHTML = `<p class="invalid">${error}</p>`;
+    }
+}
+
+// function to validate form input
+function validateFormInput () {
+    console.log("here");
+    if(postInput.value === '' && postFile.value === '') {
+        console.log("a");
+        message.innerHTML = `<p class="invalid">Your post cannot be empty.</p>`;
+    } else {
+        console.log("b");
+        submitForm(postInput, postFile);
+        postInput.value = '';
+        postFile.value = '';
+        fileNameSpan.innerText = '';
+    }
+}
+
+// validate form when add button is clicked
+onEvent('click', createPost, function (event) {
+    event.preventDefault();
+    validateFormInput();
+});
+
+// when file is selected show the file name to the user
+onEvent('change', postFile, function() {
+    // extract name of the file:
+    fileNameSpan.innerText = this.files[0].name.trim();
+});
+
+// when page is reloaded clear grid and form
+onEvent('load', window, () => {
+    gridBox.innerHTML = '';
+    fileNameSpan.innerText = '';
+    form.reset();
+});

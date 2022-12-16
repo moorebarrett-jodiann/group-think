@@ -39,7 +39,8 @@ body.index {
 }
 
 body:not(.index) {
-    background-color: #f1f1f1;
+    /* background-color: #f1f1f1; */
+    background-color: rgba(115, 153, 213, 0.09);
 }
 
 .container {
@@ -58,6 +59,13 @@ body:not(.index) {
     place-items: center;
 }
 
+header {
+    line-height: var(--app-header-line-height);
+    height: 70px;
+    background-color: #f8f8f8;
+    min-width: 500px;
+}
+
 .home-center {
     margin: 40px 0px;
 }
@@ -68,6 +76,7 @@ footer {
     display: flex;
     align-content: center;
     align-items: center;
+    min-width: 500px;
 }
 
 footer .flexbox {
