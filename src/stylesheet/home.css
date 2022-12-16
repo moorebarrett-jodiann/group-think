@@ -239,6 +239,7 @@ header .login-logo-bg .logo-name {
 .row .card.profile .profile-info .linkedin i {
     font-size: 14px;
     color: var(--app-light-blue);
+    margin-right: 10px;
 }
 
 .row .card.profile .profile-info .linkedin a {
