@@ -56,6 +56,10 @@
     display: grid;
 }
 
+.center .login-container .login-view .login-view-inner {
+    height: 80%;
+}
+
 .center .login-container .login-view h1 {
     color: var(--app-dark-text-color);
     font-size: 30px;
