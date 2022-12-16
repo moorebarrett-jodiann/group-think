@@ -1,9 +1,10 @@
-## Group Think Social
+# Group Think Social
 
+### Table of contents
 - [Demo](https://moorebarrett-jodiann.github.io/group-think/)
 - [Description](#description)
-- [Fetch API](#fetch)
-- [References](#references)
+- [Functionalities](#functionalities)
+- [Fetch API](#fetch-api)
 
 ## Description
 
@@ -18,7 +19,38 @@ Simple HTML Social Media Website, built using the following technologies:
 ![Login](./src/images/screenshots/login.png?raw=true "Login Screen")
 ![Timeline](./src/images/screenshots/timeline.png?raw=true "Timeline")
 
-## Fetch
+## Functionalities
+
+There are a few interactive features of the application:
+
+#### Login
+
+On the login page, the profile is quickly created by entering a random email and password. On initial `submit`, the email and password values are stored in the browser's local storage. This serves as a mocked database.
+
+After this, every subsequent login with that email and password will be valid. Anything else will be deemed incorrect.
+
+#### Logout
+
+After being redirected to the timeline of the application, the logout button is located to the right of the profile thumbnail phot at the top right of the screen. When clicked, the user is edirected back to the login page.
+
+#### People you may know
+
+On the timeline view,the list of users seen are all retrieved from an open-source Random User Generator API. 
+
+If the page is refreshed a new list of random users are generated.
+
+#### Adding posts to timeline
+
+By default, there are 2 static posts on the timeline, however you may generate new content simply by typing in the texarea and/or uploading your favourite images. Each post will be timestamped and added to the top of the post area. 
+
+#### LinkedIn link
+
+The LinkedIn Hyperlink opens a new tab in the browser to my LinkedIn page. 
+##### Let's Connect !! 😁👍 #####
+
+## Fetch API
+
+[(Back to top)](#table-of-contents)
 
 The Fetch API provides a generic definition of ```Request``` and ```Response```
 objects (and other things involved with network requests). It also defines
@@ -89,6 +121,8 @@ getUsers();
 ```
 
 #### CORS
+
+[(Back to top)](#table-of-contents)
 
 Cross-Origin Resource Sharing (CORS) is a protocol that enables scripts running
 on a browser client to interact with resources from a different origin. This is
