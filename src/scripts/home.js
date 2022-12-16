@@ -42,6 +42,7 @@ const message = select('.message');
 
 /**----------------------------- Generate Users ------------------------------- */
 
+// async function to retrieve users from open API
 async function getUsers() {
     try {
         const result = await fetch(url, options);
@@ -147,7 +148,7 @@ onEvent('change', postFile, function() {
     fileNameSpan.innerText = this.files[0].name.trim();
 });
 
-// when page is reloaded clear grid and form
+// when page is reloaded clear form
 onEvent('load', window, () => {
     fileNameSpan.innerText = '';
     form.reset();

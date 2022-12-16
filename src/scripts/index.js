@@ -45,9 +45,7 @@ function validate () {
     if(email.length === 0 || password.length === 0) {
         message = 'Your Email and Password are required\n';
         valid = false;
-    } 
-    
-    else if(email.length > 0 && !emailRegex.test(email)) {
+    } else if(email.length > 0 && !emailRegex.test(email)) {
         message = 'Your Email and Password are incorrect\n';
         valid = false;
     }
@@ -61,10 +59,12 @@ function validate () {
         if(!isObjectEmpty(credentials)) {
             let savedEmail = '';
             let savedPassword = '';
+
             for(const credential of credentials) {
                 savedEmail = credential.email;
                 savedPassword = credential.password;
             }
+
             // compare input with local storage values
             if(savedEmail === email && savedPassword === password) {
                 window.location.href = 'home.html';
@@ -84,22 +84,17 @@ function validate () {
     }
 }
 
+// validate input when submit button is clicked 
 onEvent('click', submit, function () {
     validate();
 });
 
+// disable default behavior of create contact button
 onEvent('click', createAcctBtn, function (e) {
     e.preventDefault();
 });
 
-/**---------------------------------------------------------------------------- */
-
-/**-------------------------- Retrieve Random Users --------------------------- */
-
-/**---------------------------------------------------------------------------- */
-
-/**----------------------- Other functions and Events ------------------------- */
-
+// when page is reloaded clear form
 onEvent('load', window, () => {
     form.reset();
 });
