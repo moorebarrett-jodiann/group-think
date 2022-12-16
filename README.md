@@ -3,7 +3,7 @@
 - [Demo](https://moorebarrett-jodiann.github.io/group-think/)
 - [Description](#description)
 - [Fetch API](#fetch)
-- [Resources](#references)
+- [References](#references)
 
 ## Description
 
