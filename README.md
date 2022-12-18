@@ -25,13 +25,13 @@ There are a few interactive features of the application:
 
 #### Login
 
-On the login page, the profile is quickly created by entering a random email and password. On initial `submit`, the email and password values are stored in the browser's local storage. This serves as a mocked database.
+On the login page, the profile is quickly created by entering a random email and password. On initial `submit`, the email and password values are stored in the browser's local storage. This will act as the applications 'database'.
 
-After this, every subsequent login with that email and password will be valid. Anything else will be deemed incorrect.
+After this, every subsequent login with that email and password will be valid. Any other email/password combination will be flagged as incorrect.
 
 #### Logout
 
-After being redirected to the timeline of the application, the logout button is located to the right of the profile thumbnail phot at the top right of the screen. When clicked, the user is edirected back to the login page.
+After being redirected to the timeline of the application, the logout button is located to the right of the profile thumbnail photo at the top right of the screen. When clicked, the user is redirected back to the login page.
 
 #### People you may know
 
