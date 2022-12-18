@@ -37,6 +37,10 @@ const postFile = select('.post-file');
 const fileNameSpan = select('.file-name-selected');
 const createPost = select('.create-post');
 const message = select('.message');
+const nav = select('nav');
+const burgerMenu = select('.burger-menu');
+const mediaQuery = window.matchMedia('(max-width: 922px)')
+const overlay = select('.overlay');
 
 /**---------------------------------------------------------------------------- */
 
@@ -152,4 +156,53 @@ onEvent('change', postFile, function() {
 onEvent('load', window, () => {
     fileNameSpan.innerText = '';
     form.reset();
+
+    // detect media query on window load and set nav as vertical or horizontal
+    if (mediaQuery.matches) {
+        nav.classList.remove('horizontal');
+        nav.classList.add('vertical');
+    } else {
+        nav.classList.remove('vertical');
+        nav.classList.add('horizontal');
+    }
 });
+
+// toggle nav as horizontal or vertical as window is resized
+onEvent('resize', window, function(){
+    if (mediaQuery.matches) {
+        nav.classList.remove('horizontal');
+        nav.classList.add('vertical');
+        hideShowVerticalNav()
+    } else {
+        nav.classList.remove('vertical');
+        nav.classList.add('horizontal');
+        hideShowVerticalNav(true);
+    }
+});
+
+// show vertical nav when burger icon is clicked.
+// hide vertical nav when anywhere outside of nav is clicked
+document.addEventListener("click", (e) => {
+    if (burgerMenu.contains(e.target)) {
+        hideShowVerticalNav(true);
+    } else {
+        hideShowVerticalNav()
+    }
+});
+
+// function to hide and show nav
+function hideShowVerticalNav(hidden = false) {
+    if(!hidden) {
+        nav.style.display = 'none';
+        nav.style.visibility = 'hidden';
+        overlay.removeAttribute('style', `animation: slide 0.5s forwards`);
+        overlay.removeAttribute('style', `visibility: visible`);
+        overlay.setAttribute('style', `visibility: hidden`);
+    } else {
+        nav.style.display = 'block';
+        nav.style.visibility = 'visible';
+        nav.style.animation = 'slide 0.5s forwards';
+        overlay.removeAttribute('style', `visibility: hidden`);
+        overlay.setAttribute('style', `visibility: visible`);
+    }
+}

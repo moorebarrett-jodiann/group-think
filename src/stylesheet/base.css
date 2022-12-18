@@ -69,12 +69,16 @@ header {
     height: 70px;
     background-color: #f8f8f8;
     min-width: 300px;
+    position: relative;
+    z-index: 10;
 }
 
 .home-center {
     min-height: calc(100vh - 70px - 112px);
     display: grid;
     margin: 20px 0px;
+    position: relative;
+    z-index: -10;
 }
 
 .message {
@@ -127,5 +131,16 @@ footer .flexbox {
     }
     to {
         opacity: 0;
+    }
+}
+
+@keyframes slide {
+    from {
+        opacity: 0;
+        transform: translate(0px, -10px);
+    }
+    to {
+        opacity: 1;
+        transform: translate(0);
     }
 }

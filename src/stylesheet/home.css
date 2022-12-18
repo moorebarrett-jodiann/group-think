@@ -62,29 +62,6 @@ header .login-logo-bg .logo-name {
     color: var(--app-light-blue);
 }
 
-/* .avatar .logout a[data-title]:hover:after {
-    opacity: 1;
-    transition: all 0.25s ease-in-out;
-    visibility: visible;
-}
-
-.avatar .logout a[data-title]:after {
-    content: attr(data-title);
-    color: var(--app-light-blue);
-    position: absolute;
-    padding: 1px 5px 2px 5px;
-    bottom: -1.6rem;
-    left: 100%;
-    white-space: nowrap;
-    opacity: 0;
-    z-index: 9999;
-    visibility: hidden;
-}
-
-.avatar .logout a[data-title] {
-    position: relative;
-} */
-
 /* Show reular nav menu when screen width is 923px and above */
 @media only screen and (min-width: 923px) { 
     .burger-menu i {
@@ -92,21 +69,21 @@ header .login-logo-bg .logo-name {
         display: none
     }
     
-    nav ul {
+    nav.horizontal ul {
         list-style: none;
     }
     
-    nav ul li {
+    nav.horizontal ul li {
         visibility: visible;
         display: inline;
     }
 
-    nav ul li + li {
-        margin-left: 20px;
+    nav.horizontal ul li + li {
+        margin-left: 30px;
     }
 
-    nav ul li a {
-        font-size: 15px;
+    nav.horizontal ul li a {
+        font-size: 14px;
         font-weight: 600;
         letter-spacing: var(--app-letter-spacing);
         cursor: pointer;
@@ -116,11 +93,11 @@ header .login-logo-bg .logo-name {
         transition: color 0.25s ease-in-out;
     }
 
-    nav ul li.default a {
+    nav.horizontal ul li.default a {
         color: var(--app-light-blue);
     }
 
-    nav ul li a:hover {
+    nav.horizontal ul li a:hover {
         color: var(--app-light-blue);
     }
 }
@@ -128,9 +105,66 @@ header .login-logo-bg .logo-name {
 
 /* Show hamburger icon when screen width is below 922px */
 @media only screen and (max-width: 922px) {
-    nav {
+    nav.horizontal {
         visibility: hidden;
         display: none;
+    }
+
+    .overlay {
+        position: absolute;
+        height: 100vh;
+        width: 100%;
+        top: 0;
+        left: 0;
+        background-color: rgba(26, 29, 40, 0.5);
+        z-index: 10;
+        visibility: hidden;
+    }
+
+    nav.vertical {
+        position: fixed;
+        width: 200px;
+        right: 0px;
+        top: 70px;
+        background-color: #f8f8f8;
+        text-align: center;
+        box-shadow: 0 10px 20px rgba(146, 153, 197, 0.15);
+        border-bottom-left-radius: 5px;
+        visibility: hidden;
+        display: none;
+        z-index: 20;
+    }
+    
+    nav.vertical ul {
+        list-style: none;
+    }
+    
+    nav.vertical ul li {
+        padding: 0px 20px;
+        transition: background-color 0.25s ease-in-out;
+    }
+
+    nav.vertical ul li + li {
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+    }
+
+    nav.vertical ul li a {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: var(--app-letter-spacing);
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--app-dark-text-color);
+        position: relative;
+    }
+
+    nav.vertical ul li.default a {
+        color: var(--app-light-blue);
+    }
+
+    nav.vertical ul li:hover {
+        background-color: var(--app-light-grey);
+        cursor: pointer;
     }
     
     .burger-menu {
@@ -144,6 +178,7 @@ header .login-logo-bg .logo-name {
     
     .burger-menu:hover {
         color: var(--app-light-blue);
+        cursor: pointer;
     }
 }
 
