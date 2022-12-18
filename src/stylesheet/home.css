@@ -7,10 +7,12 @@ header .flexbox {
     justify-content: space-between;
 }
 
-header .login-logo-bg .logo-image, .logo-name {
+header .login-logo-bg .logo-image, .logo-name a {
     display: inline;
     margin-right: 5px;
     font-size: 20px;
+    color: var(--app-dark-text-color);
+    font-weight: 700;
 }
 
 header .login-logo-bg .logo-image i {
