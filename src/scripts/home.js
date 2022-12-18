@@ -183,10 +183,12 @@ onEvent('resize', window, function(){
 // show vertical nav when burger icon is clicked.
 // hide vertical nav when anywhere outside of nav is clicked
 document.addEventListener("click", (e) => {
-    if (burgerMenu.contains(e.target)) {
-        hideShowVerticalNav(true);
-    } else {
-        hideShowVerticalNav()
+    if(nav.classList.contains('vertical')) {
+        if (burgerMenu.contains(e.target)) {
+            hideShowVerticalNav(true);
+        } else {
+            hideShowVerticalNav()
+        }
     }
 });
 
