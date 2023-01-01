@@ -8,7 +8,7 @@
 
 ## Description
 
-Simple HTML Social Media Website, built using the following technologies:
+Simple, desktop-first social media website, built using the following technologies:
 - HTML
 - CSS
 - EcmaScript (ES)
@@ -35,7 +35,7 @@ After being redirected to the timeline of the application, the logout button is 
 
 #### People you may know
 
-On the timeline view,the list of users seen are all retrieved from an open-source Random User Generator API. 
+On the timeline view, the list of users seen are all retrieved from an open-source Random User Generator API. 
 
 If the page is refreshed a new list of random users are generated.
 
@@ -46,7 +46,15 @@ By default, there are 2 static posts on the timeline, however you may generate n
 #### LinkedIn link
 
 The LinkedIn Hyperlink opens a new tab in the browser to my LinkedIn page. 
-##### Let's Connect !! 😁👍 #####
+###### Let's Connect !! 😁👍 #####
+
+#### Responsive Navigation
+
+When the browser is resized to fit tablet or mobile dimensions, the navigation options change from horizontal to vertical orientation. The vertical navigation is revealed when the burger icon is clicked.
+
+#### Responsive Page Content
+
+When the browser is resized to fit tablet or mobile dimensions, the main content adjusts from a 3 column display to a 1 column display, where each column is stacked on top of each other.
 
 ## Fetch API
 
