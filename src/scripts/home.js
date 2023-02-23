@@ -39,7 +39,7 @@ const createPost = select('.create-post');
 const message = select('.message');
 const nav = select('nav');
 const burgerMenu = select('.burger-menu');
-const mediaQuery = window.matchMedia('(max-width: 922px)')
+const mediaQuery = window.matchMedia('(max-width: 922px)');
 const overlay = select('.overlay');
 
 /**---------------------------------------------------------------------------- */

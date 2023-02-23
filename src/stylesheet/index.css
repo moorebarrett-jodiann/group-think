@@ -2,255 +2,522 @@
 @import "./home.css";
 
 /**************************************************/
-/*****      MAIN                             ******/
+/*****      DESKTOP LOGIN PAGE               ******/
 /**************************************************/
 
-.center .login-container {
-    width: 100%;
-    height: 600px;
-    box-shadow: rgba(0, 0, 0, 0.03) 0px 26px 30px 10px, rgba(0, 0, 0, 0.03) 0px 16px 10px 10px;
-    border-radius: 20px;
+@media only screen and (min-width: 923px) { 
+    .center .login-container-tablet-mobile {
+        display: none;
+    }
+
+    .center .login-container-full {
+        width: 100%;
+        height: 600px;
+        box-shadow: rgba(0, 0, 0, 0.03) 0px 26px 30px 10px, rgba(0, 0, 0, 0.03) 0px 16px 10px 10px;
+        border-radius: 20px;
+    }
+
+    .center .login-container-full .login-logo-bg, .login-view {
+        width: 50%;
+        padding: 5%;
+    }
+
+    .center .login-container-full .login-view {
+        min-width: 400px;
+    }
+
+    .center .login-container-full .login-logo-bg {
+        background: #fff url("../images/logo-bg.jpg") center center / cover no-repeat;
+        border-top-left-radius: 20px;
+        border-bottom-left-radius: 20px;
+    }
+
+    .center .login-container-full .login-logo-bg .logo-image, .logo-name {
+        display: inline;
+        margin-right: 5px;
+        font-size: 20px;
+    }
+
+    .center .login-container-full .login-logo-bg .logo-image i {
+        background: -moz-linear-gradient(top, var(--app-purple) 0%, var(--app-light-blue) 100%);
+        background: -webkit-linear-gradient(top, var(--app-purple) 0%, var(--app-light-blue) 100%);
+        background: linear-gradient(to right, var(--app-purple) 0%, var(--app-light-blue) 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 25px;
+    }
+
+    .center .login-container-full .login-logo-bg .logo-name {
+        font-weight: 700;
+        color: var(--app-dark-text-color);
+    }
+
+    .center .login-container-full .login-view {
+        background-color: var(--app-light-bg);
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        display: grid;
+        place-items: center;
+    }
+
+    .center .login-container-full .login-view h1 {
+        color: var(--app-dark-text-color);
+        font-size: 30px;
+        font-weight: 400;
+    }
+
+    .center .login-container-full .login-view h1 span {
+        font-weight: 700;
+        background: -webkit-linear-gradient(left, var(--app-purple) , var(--app-light-blue));
+        background: -o-linear-gradient(right, var(--app-purple), var(--app-light-blue));
+        background: -moz-linear-gradient(right, var(--app-purple), var(--app-light-blue));
+        background: linear-gradient(to right, var(--app-purple) , var(--app-light-blue)); 
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
+
+    .center .login-container-full .login-view .underline {
+        width: 100px;
+        margin-right: 5px;
+        height: 3px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+    }
+
+    .center .login-container-full .login-view .underline:first-child {
+        background-image: linear-gradient(to right, var(--app-purple) 0%, var(--app-light-blue) 100%);
+    }
+
+    .center .login-container-full .login-view .slogan {
+        color: var(--app-medium-grey);
+        font-weight: 600;
+        font-size: 18px;
+        margin: 20px 0px 40px 0px;
+    }
+
+    .center .login-container-full .login-view .underline + .underline {
+        margin-right: 15px;
+    }
+
+    .center .login-container-full .login-view .message {
+        text-align: left;
+    }
+
+    .center .login-container-full .login-view form input:not([type="checkbox"]) {
+        width: 100%;
+        height: 45px;
+        padding: 0 0 0 45px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        border-radius: 4px;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: left;
+        transition: border 0.4s ease-in-out;
+    }
+
+    .center .login-container-full .login-view form .form-links p input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        border-radius: 4px;
+    }
+
+    .center .login-container-full .login-view form input:not([type="checkbox"]):focus {
+        border: 1px solid rgba(56, 0, 54, 0.366);
+    }
+
+    .center .login-container-full .login-view form input:not([type="checkbox"])::placeholder {
+        color: var(--app-medium-grey);
+        font-size: 17px;
+    }
+
+    .center .login-container-full .login-view form input.email {
+        background:  rgb(255 255 255 / 0.1) url("../images/mail.png") no-repeat 15px 14px;
+        background-size: 15px;
+    }
+
+    .center .login-container-full .login-view form input.password {
+        background:  rgb(255 255 255 / 0.1) url("../images/key.png") no-repeat 15px 14px;
+        background-size: 15px;
+    }
+
+    .center .login-container-full .login-view form #toggle-password {
+        color: var(--app-medium-grey);
+        font-size: 15px;
+        margin-left: 92%;
+        cursor: pointer;
+        bottom: 35px;
+        position: relative;
+    }
+
+    .center .login-container-full .login-view form input[type="button"] {
+        height: 45px;
+        width: 100%;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        transition: all 0.4s ease-in-out;
+        background-color: var(--app-purple);
+        margin-top: 20px;
+        padding: 0 10px;
+        color: var(--app-light-text-color);
+    }
+
+    .center .login-container-full .login-view form input[type="button"]:hover {
+        background-color: var(--app-purple-hover);
+    }
+
+    .center .login-container-full .login-view form input[type="button"].secondary {
+        background-color: transparent;
+        border: 1px solid var(--app-purple);
+        color: var(--app-purple);
+    }
+
+    .center .login-container-full .login-view form input[type="button"].secondary:hover {
+        background-color: var(--app-purple-hover);
+        color: var(--app-light-text-color)
+    }
+
+    .center .login-container-full .login-view form input[type="button"] + input[type="button"] {
+        margin-left: 15px;
+    }
+
+    .center .login-container-full .login-view form input + input {
+        margin-top: 20px;
+    }
+
+    .center .login-container-full .login-view form .form-links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .center .login-container-full .login-view form .form-links p, a {
+        color: var(--app-medium-grey);
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+    }
+
+    .center .login-container-full .login-view form .form-links p {
+        display: flex;
+        align-items: center
+    }
+
+    .center .login-container-full .login-view form .form-links p input {
+        margin-right: 10px;
+    }
+
+    .center .login-container-full .login-view form .form-links a {
+        transition: color 0.4s ease-in-out;
+    }
+
+    .center .login-container-full .login-view form .form-links a:hover {
+        color: var(--app-purple-hover);
+    }
+
+    .center .login-container-full .login-view ul {
+        list-style: none;
+        margin-top: 40px;
+    }
+
+    .center .login-container-full .login-view ul li {
+        display: inline;
+    }
+
+    .center .login-container-full .login-view ul li:first-child {
+        color: var(--app-medium-grey);
+    }
+
+    .center .login-container-full .login-view ul li + li {
+        margin-left: 15px;
+    }
+
+    .center .login-container-full .login-view ul li a {
+        font-size: 16px;
+        font-weight: 600;
+        letter-spacing: var(--app-letter-spacing);
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--app-purple);
+        transition: color 0.4s ease-in-out;
+    }
+
+    .center .login-container-full .login-view ul li a i {
+        margin-right: 10px;
+    }
+
+    .center .login-container-full .login-view ul li a:hover {
+        color: var(--app-purple-hover);
+    }
 }
 
-.center .login-container .login-logo-bg, .login-view {
-    width: 50%;
-    padding: 5%;
-}
+/**************************************************/
+/*****      TABLET/MOBILE LOGIN PAGE         ******/
+/**************************************************/
 
-.center .login-container .login-view {
-    min-width: 400px;
-}
+/* Show hamburger icon when screen width is below 922px */
+@media only screen and (max-width: 922px) {
+    .center .login-container-full {
+        display: none;
+    }
 
-.center .login-container .login-logo-bg {
-    background: #fff url("../images/logo-bg.jpg") center center / cover no-repeat;
-    border-top-left-radius: 20px;
-    border-bottom-left-radius: 20px;
-}
+    .center .login-container-tablet-mobile {
+        width: 50%;
+        height: 600px;
+        box-shadow: rgba(0, 0, 0, 0.03) 0px 26px 30px 10px, rgba(0, 0, 0, 0.03) 0px 16px 10px 10px;
+        border-radius: 20px;
+        position: absolute;
+    }
 
-.center .login-container .login-logo-bg .logo-image, .logo-name {
-    display: inline;
-    margin-right: 5px;
-    font-size: 20px;
-}
+    .center .login-container-tablet-mobile {
+        min-width: 400px;
+    }
+    
+    .center .login-container-tablet-mobile .login-logo-bg {
+        height: 100%;
+        width: 100%;
+        padding: 5%;
+    }
 
-.center .login-container .login-logo-bg .logo-image i {
-    background: -moz-linear-gradient(top, var(--app-purple) 0%, var(--app-light-blue) 100%);
-    background: -webkit-linear-gradient(top, var(--app-purple) 0%, var(--app-light-blue) 100%);
-    background: linear-gradient(to right, var(--app-purple) 0%, var(--app-light-blue) 100%);
-    -webkit-background-clip: text;
-    -moz-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-    font-size: 25px;
-}
+    .center .login-container-tablet-mobile .login-logo-bg {
+        background: #fff url("../images/logo-bg.jpg") center center / cover no-repeat;
+        border-radius: 20px;
+        text-align: center;
+    }
 
-.center .login-container .login-logo-bg .logo-name {
-    font-weight: 700;
-    color: var(--app-dark-text-color);
-}
+    .center .login-container-tablet-mobile .login-logo-bg .logo-image {
+        text-align: center;
+        font-size: 20px;
+    }
+    
+    .center .login-container-tablet-mobile .login-logo-bg .logo-image i {
+        background: -moz-linear-gradient(top, var(--app-purple) 0%, var(--app-light-blue) 100%);
+        background: -webkit-linear-gradient(top, var(--app-purple) 0%, var(--app-light-blue) 100%);
+        background: linear-gradient(to right, var(--app-purple) 0%, var(--app-light-blue) 100%);
+        -webkit-background-clip: text;
+        -moz-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+        font-size: 30px;
+    }
 
-.center .login-container .login-view {
-    background-color: var(--app-light-bg);
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    display: grid;
-    place-items: center;
-}
+    .center .login-container-tablet-mobile .login-logo-bg h1 {
+        color: var(--app-dark-text-color);
+        font-size: 30px;
+        font-weight: 400;
+    }
 
-.center .login-container .login-view h1 {
-    color: var(--app-dark-text-color);
-    font-size: 30px;
-    font-weight: 400;
-}
+    .center .login-container-tablet-mobile .login-logo-bg h1 span {
+        font-weight: 700;
+        background: -webkit-linear-gradient(left, var(--app-purple) , var(--app-light-blue));
+        background: -o-linear-gradient(right, var(--app-purple), var(--app-light-blue));
+        background: -moz-linear-gradient(right, var(--app-purple), var(--app-light-blue));
+        background: linear-gradient(to right, var(--app-purple) , var(--app-light-blue)); 
+        -webkit-background-clip: text;
+        background-clip: text;
+        -webkit-text-fill-color: transparent;
+    }
 
-.center .login-container .login-view h1 span {
-    font-weight: 700;
-    background: -webkit-linear-gradient(left, var(--app-purple) , var(--app-light-blue));
-    background: -o-linear-gradient(right, var(--app-purple), var(--app-light-blue));
-    background: -moz-linear-gradient(right, var(--app-purple), var(--app-light-blue));
-    background: linear-gradient(to right, var(--app-purple) , var(--app-light-blue)); 
-    -webkit-background-clip: text;
-    background-clip: text;
-    -webkit-text-fill-color: transparent;
-}
+    .center .login-container-tablet-mobile .login-logo-bg .flexbox.underlines {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 20px 0;
+    }
+    
+    .center .login-container-tablet-mobile .login-logo-bg .underline {
+        width: 100px;
+        margin-right: 5px;
+        height: 3px;
+        background-color: rgba(0, 0, 0, 0.1);
+        border-radius: 50px;
+    }
 
-.center .login-container .login-view .underline {
-    width: 100px;
-    margin-right: 5px;
-    height: 3px;
-    background-color: rgba(0, 0, 0, 0.1);
-    border-radius: 50px;
-}
+    .center .login-container-tablet-mobile .login-logo-bg .underline:first-child {
+        background-image: linear-gradient(to right, var(--app-purple) 0%, var(--app-light-blue) 100%);
+    }
 
-.center .login-container .login-view .underline:first-child {
-    background-image: linear-gradient(to right, var(--app-purple) 0%, var(--app-light-blue) 100%);
-}
+    .center .login-container-tablet-mobile .login-logo-bg .slogan {
+        color: var(--app-medium-grey);
+        font-weight: 600;
+        font-size: 18px;
+    }
 
-.center .login-container .login-view .slogan {
-    color: var(--app-medium-grey);
-    font-weight: 600;
-    font-size: 18px;
-    margin: 20px 0px 40px 0px;
-}
+    .center .login-container-tablet-mobile .login-logo-bg .underline + .underline {
+        margin-right: 15px;
+    }
 
-.center .login-container .login-view .underline + .underline {
-    margin-right: 15px;
-}
+    .center .login-container-tablet-mobile .login-view {
+        background-color: rgba(245, 252, 255, 0.95);
+        border-radius: 10px;
+        display: grid;
+        place-items: center;
+        padding: 5%;
+    }
 
-.center .login-container .login-view .message {
-    text-align: left;
-}
+    .center .login-container-tablet-mobile .login-view .message {
+        text-align: left;
+    }
 
-.center .login-container .login-view form input:not([type="checkbox"]) {
-    width: 100%;
-    height: 45px;
-    padding: 0 0 0 45px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: transparent;
-    border-radius: 4px;
-    font-size: 17px;
-    font-weight: 400;
-    text-align: left;
-    transition: border 0.4s ease-in-out;
-}
+    .center .login-container-tablet-mobile .login-view form input:not([type="checkbox"]) {
+        width: 100%;
+        height: 45px;
+        padding: 0 0 0 45px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        border-radius: 4px;
+        font-size: 17px;
+        font-weight: 400;
+        text-align: left;
+        transition: border 0.4s ease-in-out;
+    }
 
-.center .login-container .login-view form .form-links p input[type="checkbox"] {
-    width: 15px;
-    height: 15px;
-    border: 1px solid rgba(0, 0, 0, 0.1);
-    background-color: transparent;
-    border-radius: 4px;
-}
+    .center .login-container-tablet-mobile .login-view form .form-links p input[type="checkbox"] {
+        width: 15px;
+        height: 15px;
+        border: 1px solid rgba(0, 0, 0, 0.1);
+        background-color: transparent;
+        border-radius: 4px;
+    }
 
-.center .login-container .login-view form input:not([type="checkbox"]):focus {
-    border: 1px solid rgba(56, 0, 54, 0.366);
-}
+    .center .login-container-tablet-mobile .login-view form input:not([type="checkbox"]):focus {
+        border: 1px solid rgba(56, 0, 54, 0.366);
+    }
 
-.center .login-container .login-view form input:not([type="checkbox"])::placeholder {
-    color: var(--app-medium-grey);
-    font-size: 17px;
-}
+    .center .login-container-tablet-mobile .login-view form input:not([type="checkbox"])::placeholder {
+        color: var(--app-medium-grey);
+        font-size: 17px;
+    }
 
-.center .login-container .login-view form input.email {
-    background:  rgb(255 255 255 / 0.1) url("../images/mail.png") no-repeat 15px 14px;
-    background-size: 15px;
-}
+    .center .login-container-tablet-mobile .login-view form input.email {
+        background:  rgb(255 255 255 / 0.1) url("../images/mail.png") no-repeat 15px 14px;
+        background-size: 15px;
+    }
 
-.center .login-container .login-view form input.password {
-    background:  rgb(255 255 255 / 0.1) url("../images/key.png") no-repeat 15px 14px;
-    background-size: 15px;
-}
+    .center .login-container-tablet-mobile .login-view form input.password {
+        background:  rgb(255 255 255 / 0.1) url("../images/key.png") no-repeat 15px 14px;
+        background-size: 15px;
+    }
 
-.center .login-container .login-view form #toggle-password {
-    color: var(--app-medium-grey);
-    font-size: 15px;
-    margin-left: 92%;
-    cursor: pointer;
-    bottom: 35px;
-    position: relative;
-}
+    .center .login-container-tablet-mobile .login-view form #toggle-password {
+        color: var(--app-medium-grey);
+        font-size: 15px;
+        margin-left: 92%;
+        cursor: pointer;
+        bottom: 35px;
+        position: relative;
+    }
 
-.center .login-container .login-view form input[type="button"] {
-    height: 45px;
-    width: 100%;
-    text-align: center;
-    border-radius: 4px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
-    font-size: 15px;
-    font-weight: 600;
-    letter-spacing: 0.2px;
-    transition: all 0.4s ease-in-out;
-    background-color: var(--app-purple);
-    margin-top: 20px;
-    padding: 0 10px;
-    color: var(--app-light-text-color);
-}
+    .center .login-container-tablet-mobile .login-view form input[type="button"] {
+        height: 45px;
+        width: 100%;
+        text-align: center;
+        border-radius: 4px;
+        box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: 0.2px;
+        transition: all 0.4s ease-in-out;
+        background-color: var(--app-purple);
+        margin-top: 20px;
+        padding: 0 10px;
+        color: var(--app-light-text-color);
+    }
 
-.center .login-container .login-view form input[type="button"]:hover {
-    background-color: var(--app-purple-hover);
-}
+    .center .login-container-tablet-mobile .login-view form input[type="button"]:hover {
+        background-color: var(--app-purple-hover);
+    }
 
-.center .login-container .login-view form input[type="button"].secondary {
-    background-color: transparent;
-    border: 1px solid var(--app-purple);
-    color: var(--app-purple);
-}
+    .center .login-container-tablet-mobile .login-view form input[type="button"].secondary {
+        background-color: transparent;
+        border: 1px solid var(--app-purple);
+        color: var(--app-purple);
+    }
 
-.center .login-container .login-view form input[type="button"].secondary:hover {
-    background-color: var(--app-purple-hover);
-    color: var(--app-light-text-color)
-}
+    .center .login-container-tablet-mobile .login-view form input[type="button"].secondary:hover {
+        background-color: var(--app-purple-hover);
+        color: var(--app-light-text-color)
+    }
 
-.center .login-container .login-view form input[type="button"] + input[type="button"] {
-    margin-left: 15px;
-}
+    .center .login-container-tablet-mobile .login-view form input[type="button"] + input[type="button"] {
+        margin-left: 15px;
+    }
 
-.center .login-container .login-view form input + input {
-    margin-top: 20px;
-}
+    .center .login-container-tablet-mobile .login-view form input + input {
+        margin-top: 20px;
+    }
 
-.center .login-container .login-view form .form-links {
-    width: 100%;
-    display: flex;
-    justify-content: space-between;
-    margin-top: 20px;
-}
+    .center .login-container-tablet-mobile .login-view form .form-links {
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+    }
 
-.center .login-container .login-view form .form-links p, a {
-    color: var(--app-medium-grey);
-    font-size: 14px;
-    font-weight: 400;
-    text-decoration: none;
-}
+    .center .login-container-tablet-mobile .login-view form .form-links p, a {
+        color: var(--app-medium-grey);
+        font-size: 14px;
+        font-weight: 400;
+        text-decoration: none;
+    }
 
-.center .login-container .login-view form .form-links p {
-    display: flex;
-    align-items: center
-}
+    .center .login-container-tablet-mobile .login-view form .form-links p {
+        display: flex;
+        align-items: center
+    }
 
-.center .login-container .login-view form .form-links p input {
-    margin-right: 10px;
-}
+    .center .login-container-tablet-mobile .login-view form .form-links p input {
+        margin-right: 10px;
+    }
 
-.center .login-container .login-view form .form-links a {
-    transition: color 0.4s ease-in-out;
-}
+    .center .login-container-tablet-mobile .login-view form .form-links a {
+        transition: color 0.4s ease-in-out;
+    }
 
-.center .login-container .login-view form .form-links a:hover {
-    color: var(--app-purple-hover);
-}
+    .center .login-container-tablet-mobile .login-view form .form-links a:hover {
+        color: var(--app-purple-hover);
+    }
 
-.center .login-container .login-view ul {
-    list-style: none;
-    margin-top: 40px;
-}
+    .center .login-container-tablet-mobile .login-view ul {
+        list-style: none;
+        margin: 20px 0;
+    }
 
-.center .login-container .login-view ul li {
-    display: inline;
-}
+    .center .login-container-tablet-mobile .login-view ul li {
+        display: inline;
+    }
 
-.center .login-container .login-view ul li:first-child {
-    color: var(--app-medium-grey);
-}
+    .center .login-container-tablet-mobile .login-view ul li:first-child {
+        color: var(--app-medium-grey);
+    }
 
-.center .login-container .login-view ul li + li {
-    margin-left: 15px;
-}
+    .center .login-container-tablet-mobile .login-view ul li + li {
+        margin-left: 15px;
+    }
 
-.center .login-container .login-view ul li a {
-    font-size: 16px;
-    font-weight: 600;
-    letter-spacing: var(--app-letter-spacing);
-    cursor: pointer;
-    text-decoration: none;
-    color: var(--app-purple);
-    transition: color 0.4s ease-in-out;
-}
+    .center .login-container-tablet-mobile .login-view ul li a {
+        font-size: 15px;
+        font-weight: 600;
+        letter-spacing: var(--app-letter-spacing);
+        cursor: pointer;
+        text-decoration: none;
+        color: var(--app-purple);
+        transition: color 0.4s ease-in-out;
+    }
 
-.center .login-container .login-view ul li a i {
-    margin-right: 10px;
-}
+    .center .login-container-tablet-mobile .login-view ul li a i {
+        margin-right: 10px;
+    }
 
-.center .login-container .login-view ul li a:hover {
-    color: var(--app-purple-hover);
+    .center .login-container-tablet-mobile .login-view ul li a:hover {
+        color: var(--app-purple-hover);
+    }
 }
