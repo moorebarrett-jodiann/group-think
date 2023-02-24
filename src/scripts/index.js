@@ -229,7 +229,178 @@ onEvent('resize', window, () => {
 
 // when page is reloaded clear form
 onEvent('load', window, () => {
+    
     form.reset();
+
+    // detect media query on window load to trigger tablet/mobile elements versus desktop elements
+    if (mediaQuery.matches) {
+        
+        function validate () {
+            let emailVal = emailTM.value.trim();
+            let passwordVal = passwordTM.value.trim();
+        
+            let message = '';
+            let valid = true;
+            
+            if(emailVal.length === 0 || passwordVal.length === 0) {
+                message = 'Your Email and Password are required\n';
+                valid = false;
+            } else if(emailVal.length > 0 && !emailRegex.test(emailVal)) {
+                message = 'Your Email and Password are incorrect\n';
+                valid = false;
+            }
+        
+            if (!valid) {
+                messageContainerTM.innerHTML = `<p class="invalid">${message}</p>`;
+            } else {
+                // retrieve email and password from local storage
+                const credentials = JSON.parse(localStorage.getItem('credentials') || "[]");
+                //if local storage is not empty compare user login credentials
+                if(!isObjectEmpty(credentials)) {
+                    let savedEmail = '';
+                    let savedPassword = '';
+        
+                    for(const credential of credentials) {
+                        savedEmail = credential.email;
+                        savedPassword = credential.password;
+                    }
+        
+                    // compare input with local storage values
+                    if(savedEmail === emailVal && savedPassword === passwordVal) {
+                        window.location.href = 'home.html';
+                    } else {
+                        message = 'Your Email and Password are incorrect\n';
+                        messageContainerTM.innerHTML = `<p class="invalid">${message}</p>`;
+                        form.reset();
+                    }
+                // otherwise save first time login values to local storage
+                } else {
+                    const credentials = [
+                        {email: emailVal, password: passwordVal}
+                    ];
+                    localStorage.setItem('credentials', JSON.stringify(credentials));
+                    window.location.href = 'home.html';
+                }
+            }
+        }
+        
+        // validate input when submit button is clicked 
+        onEvent('click', submitTM, function () {
+            validate();
+        });
+        
+        // disable default behavior of create contact button
+        onEvent('click', createAcctBtnTM, function (e) {
+            e.preventDefault();
+        });
+        
+        // toggle show password for login
+        onEvent('click', togglePasswordTM, function(){
+            const type = passwordTM.getAttribute('type') === 'password' ? 'text' : 'password';
+            passwordTM.setAttribute('type', type);
+            if(this.classList.contains('fa-eye-slash')) {
+                this.classList.remove('fa-eye-slash');
+                this.classList.add('fa-eye');
+            } else {
+                this.classList.remove('fa-eye');
+                this.classList.add('fa-eye-slash');
+            }
+        });
+        
+        // trigger submit.click() when enter button is pressed on login page
+        allInputTM.forEach(input => {
+            onEvent('keypress', input, function(e) {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    submitTM.click();
+                }
+            });
+        });
+
+    } else {
+        
+        function validate () {
+            let emailVal = select('.email').value.trim();
+            let passwordVal = select('.password').value.trim();
+        
+            let message = '';
+            let valid = true;
+            
+            if(emailVal.length === 0 || passwordVal.length === 0) {
+                message = 'Your Email and Password are required\n';
+                valid = false;
+            } else if(emailVal.length > 0 && !emailRegex.test(emailVal)) {
+                message = 'Your Email and Password are incorrect\n';
+                valid = false;
+            }
+        
+            if (!valid) {
+                messageContainer.innerHTML = `<p class="invalid">${message}</p>`;
+            } else {
+                // retrieve email and password from local storage
+                const credentials = JSON.parse(localStorage.getItem('credentials') || "[]");
+                //if local storage is not empty compare user login credentials
+                if(!isObjectEmpty(credentials)) {
+                    let savedEmail = '';
+                    let savedPassword = '';
+        
+                    for(const credential of credentials) {
+                        savedEmail = credential.email;
+                        savedPassword = credential.password;
+                    }
+        
+                    // compare input with local storage values
+                    if(savedEmail === emailVal && savedPassword === passwordVal) {
+                        window.location.href = 'home.html';
+                    } else {
+                        message = 'Your Email and Password are incorrect\n';
+                        messageContainer.innerHTML = `<p class="invalid">${message}</p>`;
+                        form.reset();
+                    }
+                // otherwise save first time login values to local storage
+                } else {
+                    const credentials = [
+                        {email: emailVal, password: passwordVal}
+                    ];
+                    localStorage.setItem('credentials', JSON.stringify(credentials));
+                    window.location.href = 'home.html';
+                }
+            }
+        }
+        
+        // validate input when submit button is clicked 
+        onEvent('click', submit, function () {
+            validate();
+        });
+        
+        // disable default behavior of create contact button
+        onEvent('click', createAcctBtn, function (e) {
+            e.preventDefault();
+        });
+        
+        // toggle show password for login
+        onEvent('click', togglePassword, function(){
+            const type = password.getAttribute('type') === 'password' ? 'text' : 'password';
+            password.setAttribute('type', type);
+            if(this.classList.contains('fa-eye-slash')) {
+                this.classList.remove('fa-eye-slash');
+                this.classList.add('fa-eye');
+            } else {
+                this.classList.remove('fa-eye');
+                this.classList.add('fa-eye-slash');
+            }
+        });
+        
+        // trigger submit.click() when enter button is pressed on login page
+        allInput.forEach(input => {
+            onEvent('keypress', input, function(e) {
+                if (e.key === "Enter") {
+                    e.preventDefault();
+                    submit.click();
+                }
+            });
+        });
+    }
 });
 
 /**---------------------------------------------------------------------------- */
