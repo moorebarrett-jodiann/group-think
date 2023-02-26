@@ -463,8 +463,7 @@
     }
 
     .center .login-container-tablet-mobile .login-view form input[type="button"].secondary {
-        background-color: transparent;
-        border: 1px solid var(--app-purple);
+        background-color: var(--app-light-grey);
         color: var(--app-purple);
     }
 

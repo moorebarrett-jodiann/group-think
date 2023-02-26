@@ -283,7 +283,8 @@ header .login-logo-bg .logo-name {
     margin-bottom: 20px;
 }
 
-.row .card.profile .profile-info .linkedin {
+.row .card.profile .profile-info .linkedin,
+.row .card.profile .profile-info .github {
     width: 100%;
     display: flex;
     justify-content: center;
@@ -293,10 +294,17 @@ header .login-logo-bg .logo-name {
 .row .card.profile .profile-info .linkedin i {
     font-size: 14px;
     color: var(--app-light-blue);
-    margin-right: 10px;;
+    margin-right: 10px;
 }
 
-.row .card.profile .profile-info .linkedin a {
+.row .card.profile .profile-info .github i {
+    font-size: 14px;
+    color: var(--app-purple);
+    margin-right: 10px;
+}
+
+.row .card.profile .profile-info .linkedin a,
+.row .card.profile .profile-info .github a {
     font-size: 14px;
     color: var(--app-medium-grey);
     transition: color 0.4s ease-in-out;
@@ -305,6 +313,10 @@ header .login-logo-bg .logo-name {
 
 .row .card.profile .profile-info .linkedin a:hover {
     color: var(--app-light-blue-hover);
+}
+
+.row .card.profile .profile-info .github a:hover {
+    color: var(--app-purple-hover);
 }
 
 .row .card.profile .views-connections > div {
@@ -642,7 +654,7 @@ header .login-logo-bg .logo-name {
     color: var(--app-purple);
     font-weight: 700;
     transition: all 0.3s ease-in-out;
-    padding: 5px;
+    padding: 7px 8px;
     border-radius: 50%;
     background-color: var(--app-light-text-color);
 }
