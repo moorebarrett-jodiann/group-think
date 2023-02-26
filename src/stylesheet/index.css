@@ -424,12 +424,12 @@
     }
 
     .center .login-container-tablet-mobile .login-view form input.email {
-        background: rgba(255, 255, 255, 0.1) url("../images/mail.png") no-repeat 15px 14px;
+        background: rgba(255, 255, 255, 0.1) url("../images/mail2.png") no-repeat 15px 14px;
         background-size: 15px;
     }
 
     .center .login-container-tablet-mobile .login-view form input.password {
-        background: rgba(255, 255, 255, 0.1) url("../images/key.png") no-repeat 15px 14px;
+        background: rgba(255, 255, 255, 0.1) url("../images/key2.png") no-repeat 15px 14px;
         background-size: 15px;
     }
 
