@@ -19,6 +19,8 @@ Simple, desktop-first social media website, built using the following technologi
 ![Login (Tablet - Mobile)](./src/images/screenshots/login-mobile.png?raw=true "Login Screen (Tablet - Mobile)")
 ![Login (Desktop)](./src/images/screenshots/login.png?raw=true "Login Screen (Desktop)")
 ![Timeline](./src/images/screenshots/timeline.png?raw=true "Timeline")
+![Timeline Footer (Tablet - Mobile)](./src/images/screenshots/footer-mobile.png?raw=true "Timeline Footer (Tablet - Mobile)")
+![Timeline Footer (Desktop)](./src/images/screenshots/footer.png?raw=true "Timeline Footer (Desktop)")
 
 ## Functionalities
 
