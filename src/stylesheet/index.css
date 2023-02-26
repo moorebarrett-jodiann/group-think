@@ -377,11 +377,15 @@
     }
 
     .center .login-container-tablet-mobile .login-view {
-        background-color: rgba(245, 252, 255, 0.95);
+        background: rgba(255, 255, 255, 0);
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(4.7px);
+        -webkit-backdrop-filter: blur(4.7px);
+        border: 1px solid rgba(255, 255, 255, 0.19);
         border-radius: 10px;
         display: grid;
         place-items: center;
-        padding: 5%;
+        padding: 5% 5% 10% 5%;
     }
 
     .center .login-container-tablet-mobile .login-view .message {
@@ -392,19 +396,20 @@
         width: 100%;
         height: 45px;
         padding: 0 0 0 45px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.4);
         background-color: transparent;
         border-radius: 4px;
         font-size: 17px;
         font-weight: 400;
         text-align: left;
         transition: border 0.4s ease-in-out;
+        color: var(--app-light-text-color);
     }
 
     .center .login-container-tablet-mobile .login-view form .form-links p input[type="checkbox"] {
         width: 15px;
         height: 15px;
-        border: 1px solid rgba(0, 0, 0, 0.1);
+        border: 1px solid rgba(255, 255, 255, 0.4);
         background-color: transparent;
         border-radius: 4px;
     }
@@ -414,22 +419,22 @@
     }
 
     .center .login-container-tablet-mobile .login-view form input:not([type="checkbox"])::placeholder {
-        color: var(--app-medium-grey);
+        color: var(--app-light-text-color);
         font-size: 17px;
     }
 
     .center .login-container-tablet-mobile .login-view form input.email {
-        background:  rgb(255 255 255 / 0.1) url("../images/mail.png") no-repeat 15px 14px;
+        background: rgba(255, 255, 255, 0.1) url("../images/mail.png") no-repeat 15px 14px;
         background-size: 15px;
     }
 
     .center .login-container-tablet-mobile .login-view form input.password {
-        background:  rgb(255 255 255 / 0.1) url("../images/key.png") no-repeat 15px 14px;
+        background: rgba(255, 255, 255, 0.1) url("../images/key.png") no-repeat 15px 14px;
         background-size: 15px;
     }
 
     .center .login-container-tablet-mobile .login-view form #toggle-password {
-        color: var(--app-medium-grey);
+        color: var(--app-light-text-color);
         font-size: 15px;
         margin-left: 85%;
         cursor: pointer;
@@ -483,7 +488,7 @@
     }
 
     .center .login-container-tablet-mobile .login-view form .form-links p, a {
-        color: var(--app-medium-grey);
+        color: var(--app-light-text-color);
         font-size: 14px;
         font-weight: 400;
         text-decoration: none;
@@ -514,7 +519,7 @@
     }
 
     .center .login-container-tablet-mobile .login-view .media-icons-title {
-        color: var(--app-medium-grey);
+        color: var(--app-light-text-color);
         margin-right: 10px;
     }    
 
