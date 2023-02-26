@@ -61,7 +61,7 @@ header .login-logo-bg .logo-name {
 }
 
 .avatar .logout a:hover {
-    color: var(--app-light-blue);
+    color: var(--app-light-blue-hover);
 }
 
 /* Show reular nav menu when screen width is 923px and above */
@@ -100,7 +100,7 @@ header .login-logo-bg .logo-name {
     }
 
     nav.horizontal ul li a:hover {
-        color: var(--app-light-blue);
+        color: var(--app-light-blue-hover);
     }
 }
 
@@ -160,13 +160,25 @@ header .login-logo-bg .logo-name {
         position: relative;
     }
 
-    nav.vertical ul li.default a {
+    nav.vertical ul li.default a {        
         color: var(--app-light-blue);
     }
 
+    nav.vertical ul li.default:hover {
+        background-color: var(--app-light-blue);
+    }
+    
+    nav.vertical ul li.default:hover a {        
+        color: var(--app-light-text-color);
+    }
+    
     nav.vertical ul li:hover {
-        background-color: var(--app-light-grey);
+        background-color: var(--app-light-blue);
         cursor: pointer;
+    }
+    
+    nav.vertical ul li:hover a {
+        color: var(--app-light-text-color);
     }
     
     .burger-menu {
@@ -179,7 +191,7 @@ header .login-logo-bg .logo-name {
     }
     
     .burger-menu:hover {
-        color: var(--app-light-blue);
+        color: var(--app-light-blue-hover);
         cursor: pointer;
     }
 }
@@ -291,7 +303,7 @@ header .login-logo-bg .logo-name {
 }
 
 .row .card.profile .profile-info .linkedin a:hover {
-    color: var(--app-light-blue);
+    color: var(--app-light-blue-hover);
 }
 
 .row .card.profile .views-connections > div {
@@ -327,34 +339,35 @@ header .login-logo-bg .logo-name {
 }
 
 .row .card.profile .premium-info button {
-    height: 40px;
+    height: 35px;
     text-align: center;
     border-radius: 4px;
     letter-spacing: 0.2px;
     transition: all 0.4s ease-in-out;
-    background-color: var(--app-light-grey);
-    color: var(--app-purple);
+    background-color: var(--app-light-blue);
+    color: var(--app-light-text-color);
+    box-shadow: rgba(0, 0, 0, 0.118) 0px 5px 3px 0px;
     text-transform: uppercase;
-    padding: 0 20px;
+    padding: 0 25px;
     margin-top: 10px;
 }
 
 @media only screen and (min-width: 923px) { 
     .row .card.profile .premium-info button {
         font-size: 13px;
-        font-weight: 600;
+        font-weight: 700;
     }
 }
 
 @media only screen and (max-width: 922px) {
     .row .card.profile .premium-info button {
-        font-size: 15px;
+        font-size: 13px;
         font-weight: 700;
     }
 }
 
 .row .card.profile .premium-info button:hover {
-    background-color: var(--app-purple-hover);
+    background-color: var(--app-light-blue-hover);
     color: var(--app-light-text-color);
 }
 
@@ -373,27 +386,32 @@ header .login-logo-bg .logo-name {
 
 .timeline-post .form textarea {
     width: 100%;
-    height: 80px;
     border: none;
-    background: none;
     font-size: 17px;
     font-weight: 400;
     text-align: left;
+    background-color: var(--app-light-grey);
     color: var(--app-dark-text-color);
+    border-radius: 5px;
     resize: none;
+    padding: 0 10px;
+    padding-top: 15px;
 }
 
-.timeline-post .form .flexbox {
+.timeline-post .form textarea::placeholder {
+    line-height: 25px;
+}
+
+.timeline-post .form .timeline-post-actions {
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
     margin-top: 15px;
-}
-
-.timeline-post .form .flexbox {
+    display: flex;
     justify-content: space-between;
     align-items: center;
+    padding: 15px 0 0 0;
 }
 
-.file-name-selected {
-    width: 80%;
+.timeline-post .form .file-name-selected {
     height: 40px;
     text-align: left;
     color: var(--app-medium-grey);
@@ -403,32 +421,72 @@ header .login-logo-bg .logo-name {
     align-items: center;
 }
 
-#fileInput{
+.timeline-post .form #fileInput{
     display: none;
 }
 
-.file-icon{
-    cursor: pointer;
+.timeline-post .form .add-photo-icon {
+    display: flex;
+}
+
+.timeline-post .form .add-photo-icon p {
+    margin-left: 10px;
     color: var(--app-medium-grey);
+}
+
+@media only screen and (min-width: 923px) { 
+    .timeline-post .form .file-name-selected {
+        width: 60%;
+    }
+
+    .timeline-post .form .add-photo-icon p {
+        font-size: 16px;
+    }
+}
+
+@media only screen and (max-width: 922px) {
+    .timeline-post .form .file-name-selected {
+        width: 35%;
+    }
+
+    .timeline-post .form .add-photo-icon p {
+        font-size: 14px;
+    }
+}
+
+
+.timeline-post .form .file-icon{
+    cursor: pointer;
+    color: var(--app-yellow);
     font-size: 25px;
 }
 
-.timeline-post .form .flexbox button {
-    height: 40px;
+.timeline-post .form .timeline-post-actions button {
+    height: 35px;
     text-align: center;
     border-radius: 4px;
     font-size: 13px;
     font-weight: 600;
     letter-spacing: 0.2px;
     transition: all 0.4s ease-in-out;
-    background-color: var(--app-light-grey);
-    color: var(--app-purple);
     text-transform: uppercase;
-    padding: 0 20px;
-    margin-top: 10px;
+    padding: 0 15px;
 }
 
-.timeline-post .form .flexbox button:hover {
+.timeline-post .form .timeline-post-actions button:not(.disabled) {
+    background-color: var(--app-purple);
+    color: var(--app-light-text-color);
+    cursor: pointer;
+}
+
+
+.timeline-post .form .timeline-post-actions button.disabled {
+    background-color: var(--app-light-grey);
+    color: var(--app-grey-text-color);
+    cursor: not-allowed;
+}
+
+.timeline-post .form .timeline-post-actions button:not(.disabled):hover {
     background-color: var(--app-purple-hover);
     color: var(--app-light-text-color);
 }
@@ -467,19 +525,19 @@ header .login-logo-bg .logo-name {
 }
 
 .grid > div.card .post-header .profile-name {
-    width: 73%;
+    width: 70%;
     color: var(--app-dark-text-color);
     font-size: 15px;
     font-weight: 600;
     text-align: left;
-    margin-left: 5px;
+    padding-left: 10px;
 }
 
 .grid > div.card .post-header .post-date {
     color: rgba(28, 28, 28, 0.6);
     font-size: 15px;
-    width: 20%;
-    margin-left: 5px;
+    width: 30%;
+    text-align: right;
 }
 
 .grid > div.card .post-header p {

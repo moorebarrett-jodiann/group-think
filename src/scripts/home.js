@@ -92,6 +92,16 @@ onEvent('load', window, () => {
     getUsers();
 });
 
+
+// when page is loaded populate grid
+onEvent('keyup', postInput, () => {
+    if(postInput.value.length > 3){
+        createPost.classList.remove('disabled');
+    } else {
+        createPost.classList.add('disabled');
+    }
+});
+
 /**---------------------------------------------------------------------------- */
 
 /**--------------------------------- Timeline --------------------------------- */
@@ -142,8 +152,12 @@ function validateFormInput () {
 
 // validate form when add button is clicked
 onEvent('click', createPost, function (event) {
-    event.preventDefault();
-    validateFormInput();
+    if(createPost.classList.contains('disabled')) {
+        event.preventDefault();
+    } else {
+        event.preventDefault();
+        validateFormInput();
+    }
 });
 
 // when file is selected show the file name to the user

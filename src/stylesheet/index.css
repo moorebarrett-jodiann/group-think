@@ -55,7 +55,7 @@
     }
 
     .center .login-container-full .login-view {
-        background-color: var(--app-light-bg);
+        background-color: var(--app-white-bg);
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         display: grid;
@@ -223,40 +223,60 @@
     .center .login-container-full .login-view form .form-links a:hover {
         color: var(--app-purple-hover);
     }
-
-    .center .login-container-full .login-view ul {
-        list-style: none;
-        margin-top: 40px;
+    
+    .center .login-container-full .login-view .media-icons-group {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
     }
 
-    .center .login-container-full .login-view ul li {
-        display: inline;
-    }
-
-    .center .login-container-full .login-view ul li:first-child {
+    .center .login-container-full .login-view .media-icons-title {
         color: var(--app-medium-grey);
-    }
-
-    .center .login-container-full .login-view ul li + li {
-        margin-left: 15px;
-    }
-
-    .center .login-container-full .login-view ul li a {
-        font-size: 16px;
-        font-weight: 600;
-        letter-spacing: var(--app-letter-spacing);
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--app-purple);
-        transition: color 0.4s ease-in-out;
-    }
-
-    .center .login-container-full .login-view ul li a i {
         margin-right: 10px;
-    }
+    }    
 
-    .center .login-container-full .login-view ul li a:hover {
-        color: var(--app-purple-hover);
+    .center .login-container-full .login-view .media-icons {
+        display: flex;
+    }    
+    
+    .center .login-container-full .login-view .media-icons a {
+        height: 40px;
+        width: 40px;
+        margin: 0 8px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: var(--app-dark-text-color);
+        font-size: 17px;
+        text-decoration: none;
+        transition: all 0.4s ease;
+    }
+    
+    .center .login-container-full .login-view .media-icons a:nth-child(1) {
+        background: var(--app-light-grey);
+    }
+    
+    .center .login-container-full .login-view .media-icons a:nth-child(1):hover {
+        color: #4267b2;
+        transform: translateY(-3px);
+    }
+      
+    .center .login-container-full .login-view .media-icons a:nth-child(2) {
+        background: var(--app-light-grey);
+    }
+    
+    .center .login-container-full .login-view .media-icons a:nth-child(2):hover {
+        color: #0077b5;
+        transform: translateY(-3px);
+    }
+    
+    .center .login-container-full .login-view .media-icons a:nth-child(3) {
+        background: var(--app-light-grey);
+    }
+    
+    .center .login-container-full .login-view .media-icons a:nth-child(3):hover {
+        color: #ff0000;
+        transform: translateY(-3px);
     }
 }
 
@@ -411,7 +431,7 @@
     .center .login-container-tablet-mobile .login-view form #toggle-password {
         color: var(--app-medium-grey);
         font-size: 15px;
-        margin-left: 92%;
+        margin-left: 85%;
         cursor: pointer;
         bottom: 35px;
         position: relative;
@@ -485,39 +505,60 @@
     .center .login-container-tablet-mobile .login-view form .form-links a:hover {
         color: var(--app-purple-hover);
     }
-
-    .center .login-container-tablet-mobile .login-view ul {
-        list-style: none;
-        margin: 20px 0;
+    
+    .center .login-container-tablet-mobile .login-view .media-icons-group {
+        display: flex;
+        margin-top: 20px;
+        align-items: center;
+        justify-content: center;
     }
 
-    .center .login-container-tablet-mobile .login-view ul li {
-        display: inline;
-    }
-
-    .center .login-container-tablet-mobile .login-view ul li:first-child {
+    .center .login-container-tablet-mobile .login-view .media-icons-title {
         color: var(--app-medium-grey);
-    }
-
-    .center .login-container-tablet-mobile .login-view ul li + li {
-        margin-left: 15px;
-    }
-
-    .center .login-container-tablet-mobile .login-view ul li a {
-        font-size: 15px;
-        font-weight: 600;
-        letter-spacing: var(--app-letter-spacing);
-        cursor: pointer;
-        text-decoration: none;
-        color: var(--app-purple);
-        transition: color 0.4s ease-in-out;
-    }
-
-    .center .login-container-tablet-mobile .login-view ul li a i {
         margin-right: 10px;
-    }
+    }    
 
-    .center .login-container-tablet-mobile .login-view ul li a:hover {
-        color: var(--app-purple-hover);
+    .center .login-container-tablet-mobile .login-view .media-icons {
+        display: flex;
+    }     
+    
+    .center .login-container-tablet-mobile .login-view .media-icons a {
+        height: 40px;
+        width: 40px;
+        margin: 0 8px;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 40px;
+        color: var(--app-dark-text-color);
+        font-size: 17px;
+        text-decoration: none;
+        transition: all 0.4s ease;
+    }
+    
+    .center .login-container-tablet-mobile .login-view .media-icons a:nth-child(1) {
+        background: var(--app-light-grey);
+    }
+    
+    .center .login-container-tablet-mobile .login-view .media-icons a:nth-child(1):hover {
+        color: #4267b2;
+        transform: translateY(-3px);
+    }
+      
+    .center .login-container-tablet-mobile .login-view .media-icons a:nth-child(2) {
+        background: var(--app-light-grey);
+    }
+    
+    .center .login-container-tablet-mobile .login-view .media-icons a:nth-child(2):hover {
+        color: #0077b5;
+        transform: translateY(-3px);
+    }
+    
+    .center .login-container-tablet-mobile .login-view .media-icons a:nth-child(3) {
+        background: var(--app-light-grey);
+    }
+    
+    .center .login-container-tablet-mobile .login-view .media-icons a:nth-child(3):hover {
+        color: #ff0000;
+        transform: translateY(-3px);
     }
 }
