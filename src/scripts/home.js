@@ -93,7 +93,7 @@ onEvent('load', window, () => {
 });
 
 
-// when page is loaded populate grid
+// if a user enters more than 3 characters in the post field, enable post button
 onEvent('keyup', postInput, () => {
     if(postInput.value.length > 3){
         createPost.classList.remove('disabled');
