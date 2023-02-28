@@ -35,6 +35,7 @@ const gridBox = select('.grid');
 const postInput = select('.post-input');
 const postFile = select('.post-file');
 const fileNameSpan = select('.file-name-selected');
+const fileNameSpanRemoveAttachment = select('.file-name-selected.not-empty::before');
 const createPost = select('.create-post');
 const message = select('.message');
 const nav = select('nav');
@@ -102,13 +103,23 @@ onEvent('keyup', postInput, () => {
     }
 });
 
+// if a user selects an image only, enable post button
 onEvent('change', postFile, () => {
     if(postFile.value !== ''){
         createPost.classList.remove('disabled');
+        fileNameSpan.classList.add('not-empty');
     } else {
         createPost.classList.add('disabled');
+        fileNameSpan.classList.remove('not-empty');
     }
 });
+
+// onEvent('click', fileNameSpanRemoveAttachment, (e) => {
+//     if (e.offsetX > fileNameSpanRemoveAttachment.offsetWidth) {
+//         fileNameSpan.value = '';
+//         postInput.value = ''
+//     }
+// });
 
 /**---------------------------------------------------------------------------- */
 

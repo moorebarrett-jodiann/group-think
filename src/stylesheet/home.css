@@ -356,7 +356,7 @@ header .login-logo-bg .logo-name {
 }
 
 .row .card.profile .premium-info button {
-    height: 35px;
+    height: 40px;
     text-align: center;
     border-radius: 4px;
     letter-spacing: 0.2px;
@@ -365,7 +365,7 @@ header .login-logo-bg .logo-name {
     color: var(--app-light-text-color);
     box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     text-transform: uppercase;
-    padding: 0 25px;
+    padding: 0 15px;
     margin-top: 10px;
 }
 
@@ -435,8 +435,18 @@ header .login-logo-bg .logo-name {
     font-size: 14px;
     margin-left: 10px;
     display: flex;
-    align-items: center;
+    align-items: center;    
 }
+
+/* .timeline-post .form .file-name-selected.not-empty::before {
+    position: relative;
+    content: "\f1f8";
+    font-family: FontAwesome;
+    top: 0;
+    left: 90%;
+    padding-right: 10px;
+    cursor: pointer;
+} */
 
 .timeline-post .form #fileInput{
     display: none;
@@ -444,6 +454,7 @@ header .login-logo-bg .logo-name {
 
 .timeline-post .form .add-photo-icon {
     display: flex;
+    align-items: center;
 }
 
 .timeline-post .form .add-photo-icon p {
@@ -460,7 +471,7 @@ header .login-logo-bg .logo-name {
 
 @media only screen and (max-width: 922px) {
     .timeline-post .form .file-name-selected {
-        width: 35%;
+        width: 50%;
     }
 }
 
@@ -472,7 +483,7 @@ header .login-logo-bg .logo-name {
 }
 
 .timeline-post .form .timeline-post-actions button {
-    height: 35px;
+    height: 40px;
     text-align: center;
     border-radius: 4px;
     font-size: 13px;
@@ -568,6 +579,8 @@ header .login-logo-bg .logo-name {
 
 .grid > div.card .post-body p {
     font-size: 14px;
+    word-wrap: break-all;
+    word-break: break-all;
 }
 
 .message {
