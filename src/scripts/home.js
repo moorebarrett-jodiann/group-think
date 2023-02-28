@@ -102,6 +102,14 @@ onEvent('keyup', postInput, () => {
     }
 });
 
+onEvent('change', postFile, () => {
+    if(postFile.value !== ''){
+        createPost.classList.remove('disabled');
+    } else {
+        createPost.classList.add('disabled');
+    }
+});
+
 /**---------------------------------------------------------------------------- */
 
 /**--------------------------------- Timeline --------------------------------- */

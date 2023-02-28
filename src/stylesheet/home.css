@@ -283,12 +283,14 @@ header .login-logo-bg .logo-name {
     margin-bottom: 20px;
 }
 
-.row .card.profile .profile-info .linkedin,
-.row .card.profile .profile-info .github {
+.row .card.profile .profile-info .connect {
     width: 100%;
     display: flex;
-    justify-content: center;
-    align-items: center;
+}
+
+.row .card.profile .profile-info .linkedin,
+.row .card.profile .profile-info .github {
+    width: 50%;
 }
 
 .row .card.profile .profile-info .linkedin i {
@@ -339,6 +341,7 @@ header .login-logo-bg .logo-name {
 
 .row .card.profile .views-connections p {
     color: var(--app-medium-grey);
+    font-size: 14px;
 }
 
 .row .card.profile .premium-info {
@@ -348,6 +351,7 @@ header .login-logo-bg .logo-name {
 
 .row .card.profile .premium-info p {
     font-size: 14px;
+    opacity: 0.8;
     color: var(--app-dark-text-color);
 }
 
@@ -359,7 +363,7 @@ header .login-logo-bg .logo-name {
     transition: all 0.4s ease-in-out;
     background-color: var(--app-light-blue);
     color: var(--app-light-text-color);
-    box-shadow: rgba(0, 0, 0, 0.118) 0px 5px 3px 0px;
+    box-shadow: rgba(0, 0, 0, 0.1) 0px 26px 30px -10px, rgba(0, 0, 0, 0.1) 0px 16px 10px -10px;
     text-transform: uppercase;
     padding: 0 25px;
     margin-top: 10px;
@@ -444,6 +448,7 @@ header .login-logo-bg .logo-name {
 
 .timeline-post .form .add-photo-icon p {
     margin-left: 10px;
+    font-size: 14px;
     color: var(--app-medium-grey);
 }
 
@@ -451,19 +456,11 @@ header .login-logo-bg .logo-name {
     .timeline-post .form .file-name-selected {
         width: 60%;
     }
-
-    .timeline-post .form .add-photo-icon p {
-        font-size: 16px;
-    }
 }
 
 @media only screen and (max-width: 922px) {
     .timeline-post .form .file-name-selected {
         width: 35%;
-    }
-
-    .timeline-post .form .add-photo-icon p {
-        font-size: 14px;
     }
 }
 
@@ -479,7 +476,7 @@ header .login-logo-bg .logo-name {
     text-align: center;
     border-radius: 4px;
     font-size: 13px;
-    font-weight: 600;
+    font-weight: 700;
     letter-spacing: 0.2px;
     transition: all 0.4s ease-in-out;
     text-transform: uppercase;
@@ -547,8 +544,8 @@ header .login-logo-bg .logo-name {
 }
 
 .grid > div.card .post-header .post-date {
-    color: rgba(28, 28, 28, 0.6);
-    font-size: 15px;
+    font-size: 14px;
+    color: var(--app-medium-grey);
     width: 30%;
     text-align: right;
 }
@@ -567,6 +564,10 @@ header .login-logo-bg .logo-name {
     width: 100%;
     display: grid;
     place-items: center;
+}
+
+.grid > div.card .post-body p {
+    font-size: 14px;
 }
 
 .message {
@@ -612,12 +613,9 @@ header .login-logo-bg .logo-name {
         margin-right: 10px;
     }
 
-    .row .card.users .users .user-cards .user-card .details .name {
-        font-size: 14px;
-    }
-
+    .row .card.users .users .user-cards .user-card .details .name,
     .row .card.users .users .user-cards .user-card .details .city {
-        font-size: 13px;
+        font-size: 14px;
     }
 }
 

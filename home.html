@@ -10,7 +10,6 @@
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
         <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Nunito+Sans:wght@400;600;700&display=swap">
-        <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Rubik:wght@300;400;500;600;700;800;900&display=swap">
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css" integrity="sha512-xh6O/CkQoPOWDdYTDqeRdPCVd1SpvCA9XXcUnZS2FmJNp1coAFzvtCN9BmamE+4aHK8yyUHUSCcJHgXloTyT2A==" crossorigin="anonymous" referrerpolicy="no-referrer" />
         <link rel="stylesheet" href="src/stylesheet/index.css" media="all"/>
         <script src="src/scripts/home.js" defer></script>
@@ -56,13 +55,15 @@
                                     <h2>Jodi-Ann Barrett</h2>
                                     <p>Full-Stack Software Developer</p>
                                 </div>
-                                <div class="linkedin">
-                                    <i class="fa-solid fa-link"></i>
-                                    <a href="https://www.linkedin.com/in/jodiannmoorebarrett/" target="_blank">LinkedIn</a>
-                                </div>
-                                <div class="github">
-                                    <i class="fa-brands fa-github"></i>
-                                    <a href="https://github.com/moorebarrett-jodiann" target="_blank">GitHub</a>
+                                <div class="connect">
+                                    <div class="linkedin">
+                                        <i class="fa-solid fa-link"></i>
+                                        <a href="https://www.linkedin.com/in/jodiannmoorebarrett/" target="_blank">LinkedIn</a>
+                                    </div>
+                                    <div class="github">
+                                        <i class="fa-brands fa-github"></i>
+                                        <a href="https://github.com/moorebarrett-jodiann" target="_blank">GitHub</a>
+                                    </div>
                                 </div>
                             </div>
                             <div class="views-connections flexbox">
@@ -138,69 +139,59 @@
             </div>
             <footer>
                 <div class="container">
-                    <div class="content">
-                        <div class="top">
-                            <div class="logo-details">
-                                <span class="logo_name">GroupThink</span>
-                            </div>
-                            <div class="media-icons">
-                                <a href="#"><i class="fab fa-facebook-f"></i></a>
-                                <a href="#"><i class="fab fa-twitter"></i></a>
-                                <a href="#"><i class="fab fa-instagram"></i></a>
-                                <a href="#"><i class="fab fa-linkedin-in"></i></a>
-                                <a href="#"><i class="fab fa-youtube"></i></a>
-                            </div>
+                    <div class="top">
+                        <div class="logo-details">
+                            <span class="logo-name">GroupThink</span>
                         </div>
-                        <div class="link-boxes">
-                            <ul class="box">
-                                <li class="link_name">Dashboard</li>
-                                <li><a href="#">Profile</a></li>
-                                <li><a href="#">My account</a></li>
-                                <li><a href="#">Settings</a></li>
-                                <li><a href="#">Pricing</a></li>
-                            </ul>
-                            <ul class="box">
-                                <li class="link_name">Projects</li>
-                                <li><a href="#">HTML & CSS</a></li>
-                                <li><a href="#">JavaScript</a></li>
-                                <li><a href="#">React Native</a></li>
-                                <li><a href="#">Illustrator</a></li>
-                            </ul>
-                            <ul class="box input-box">
-                                <li class="link_name">For Newsletter</li>
-                                <li>
-                                    <input
-                                    class="input-field"
-                                    type="text"
-                                    placeholder="Enter your email"
-                                    />
-                                </li>
-                                <li><input type="button" value="Submit" /></li>
-                            </ul>
-                            <ul class="box">
-                                <li class="link_name">Business</li>
-                                <li><a href="#">Home</a></li>
-                                <li><a href="#">About us</a></li>
-                                <li><a href="#">Contact us</a></li>
-                                <li><a href="#">Get started</a></li>
-                            </ul>
-                            <ul class="box">
-                                <li class="link_name">Services</li>
-                                <li><a href="#">Logo design</a></li>
-                                <li><a href="#">Banner design</a></li>
-                                <li><a href="#">Web design</a></li>
-                                <li><a href="#">App design</a></li>
-                            </ul>
+                        <div class="media-icons">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
                         </div>
                     </div>
-                    <div class="bottom-details">
-                        <div class="bottom_text">
-                            <span class="copyright_text">Copyright © 2023 All rights reserved</span>
-                            <span class="policy_terms">
-                                <a href="#">Privacy policy</a>
-                                <a href="#">Terms & condition</a>
-                            </span>
-                        </div>
+                    <div class="link-boxes">
+                        <ul class="box">
+                            <li class="link-name">Dashboard</li>
+                            <li><a href="#">Profile</a></li>
+                            <li><a href="#">My account</a></li>
+                            <li><a href="#">Settings</a></li>
+                            <li><a href="#">Pricing</a></li>
+                        </ul>
+                        <ul class="box">
+                            <li class="link-name">Projects</li>
+                            <li><a href="#">HTML & CSS</a></li>
+                            <li><a href="#">JavaScript</a></li>
+                            <li><a href="#">React Native</a></li>
+                            <li><a href="#">Illustrator</a></li>
+                        </ul>
+                        <ul class="box input-box">
+                            <li class="link-name">For Newsletter</li>
+                            <li><input class="input-field" type="text" placeholder="Enter your email"/></li>
+                            <li><input type="button" value="SUBMIT"/></li>
+                        </ul>
+                        <ul class="box">
+                            <li class="link-name">Business</li>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#">About us</a></li>
+                            <li><a href="#">Contact us</a></li>
+                            <li><a href="#">Get started</a></li>
+                        </ul>
+                        <ul class="box">
+                            <li class="link-name">Services</li>
+                            <li><a href="#">Logo design</a></li>
+                            <li><a href="#">Banner design</a></li>
+                            <li><a href="#">Web design</a></li>
+                            <li><a href="#">App design</a></li>
+                        </ul>
+                    </div>
+                    <div class="bottom-text">
+                        <span class="copyright-text">Copyright © 2023 All rights reserved</span>
+                        <span class="policy-terms">
+                            <a href="#">Privacy Policy</a>
+                            <a href="#">Terms & Conditions</a>
+                        </span>
                     </div>
                 </div>
             </footer>
