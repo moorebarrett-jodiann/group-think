@@ -16,11 +16,7 @@ Simple, desktop-first social media website, built using the following technologi
 - ES Fetch API
 - [Random User Generator API](https://randomuser.me/)
 
-![Login (Tablet - Mobile)](./src/images/screenshots/login-mobile.png?raw=true "Login Screen (Tablet - Mobile)")
-![Login (Desktop)](./src/images/screenshots/login.jpeg?raw=true "Login Screen (Desktop)")
-![Timeline](./src/images/screenshots/timeline.jpeg?raw=true "Timeline")
-![Timeline Footer (Tablet - Mobile)](./src/images/screenshots/footer-mobile.jpeg?raw=true "Timeline Footer (Tablet - Mobile)")
-![Timeline Footer (Desktop)](./src/images/screenshots/footer.jpeg?raw=true "Timeline Footer (Desktop)")
+![Group Think](./src/images/screenshots/Group-Think.png?raw=true "Group Think")
 
 ## Functionalities
 
