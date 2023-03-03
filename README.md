@@ -1,12 +1,12 @@
-# Group Think Social
+<h1 align="center">Group Think</h1>
 
 ### Table of contents
-- [Demo](https://moorebarrett-jodiann.github.io/group-think/)
+- :computer: :point_right: [Demo](https://moorebarrett-jodiann.github.io/group-think/) :point_left:
 - [Description](#description)
 - [Functionalities](#functionalities)
 - [Fetch API](#fetch-api)
 
-## Description
+### Description
 
 Simple, desktop-first social media website, built using the following technologies:
 - HTML
@@ -18,44 +18,44 @@ Simple, desktop-first social media website, built using the following technologi
 
 ![Group Think](./src/images/screenshots/Group-Think.png?raw=true "Group Think")
 
-## Functionalities
+### Functionalities
 
 There are a few interactive features of the application:
 
-#### Login
+#### :label: Login
 
 On the login page, the profile is quickly created by entering a random email and password. On initial `submit`, the email and password values are stored in the browser's local storage. This will act as the applications 'database'.
 
 After this, every subsequent login with that email and password will be valid. Any other email/password combination will be flagged as incorrect.
 
-#### Logout
+#### :label: Logout
 
 After being redirected to the timeline of the application, the logout button is located to the right of the profile thumbnail photo at the top right of the screen. When clicked, the user is redirected back to the login page.
 
-#### People you may know
+#### :label: People you may know
 
 On the timeline view, the list of users seen are all retrieved from an open-source Random User Generator API. 
 
 If the page is refreshed a new list of random users are generated.
 
-#### Adding posts to timeline
+#### :label: Adding posts to timeline
 
 By default, there are 2 static posts on the timeline, however you may generate new content simply by typing in the texarea and/or uploading your favourite images. Each post will be timestamped and added to the top of the post area. 
 
-#### LinkedIn link
+#### :label: LinkedIn and GitHub link
 
-The LinkedIn Hyperlink opens a new tab in the browser to my LinkedIn page. 
+The LinkedIn and GitHub Hyperlinks open new tabs in the browser to my LinkedIn and GitHub pages. 
 ###### Let's Connect !! 😁👍 #####
 
-#### Responsive Navigation
+#### :label: Responsive Navigation
 
 When the browser is resized to fit tablet or mobile dimensions, the navigation options change from horizontal to vertical orientation. The vertical navigation is revealed when the burger icon is clicked.
 
-#### Responsive Page Content
+#### :label: Responsive Page Content
 
 When the browser is resized to fit tablet or mobile dimensions, the main content adjusts from a 3 column display to a 1 column display, where each column is stacked on top of each other.
 
-## Fetch API
+### Fetch API
 
 [(Back to top)](#table-of-contents)
 
@@ -66,7 +66,7 @@ their separate definitions elsewhere. Fetch returns a ```Promise```, an object
 represents the eventual completion (or failure) of an asynchronous operation
 and its resulting value.
 
-#### Asynchronous functions
+#### :label: Asynchronous functions
 
 The magic of ```async``` functions is that we can write asynchronous code that
 looks like synchronous code. It's still asynchronous code but instead of
